@@ -7,6 +7,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!--  Hotel view resources - start  -->
+    <string name="soran_palace_hotel_desc">Soran Palace Hotel sample</string>
+    <string name="hotel_name">Soran Palace</string>
+    <!--  Hotel view resources - start  -->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
