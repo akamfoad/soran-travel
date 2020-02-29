@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/placeholder_image"
-        android:layout_width="415dp"
-        android:layout_height="232dp"
-        android:contentDescription="SORAN"
-        android:foregroundTint="#03A9F4"
+    <LinearLayout
+        android:id="@+id/carousilParent"
+        android:layout_width="409dp"
+        android:layout_height="306dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/soran_palas_hotel" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselmain"
+            android:layout_width="match_parent"
+            android:layout_height="302dp"
+            app:fillColor="#ffffff"
+            app:pageColor="#000000"
+            app:radius="6dp"
+            app:slideInterval="5000"
+            app:strokeColor="#f77777"
+            app:strokeWidth="1dp"></com.synnapps.carouselview.CarouselView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/shortcuts_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/placeholder_image">
+        app:layout_constraintTop_toBottomOf="@+id/carousilParent">
 
         <TextView
             android:id="@+id/textView2"
@@ -61,19 +77,10 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="100dp"
         android:tooltipText="@android:string/search_go"
-        app:layout_constraintEnd_toStartOf="@+id/placeholder_image"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
     </SearchView>
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shortcuts_container" />
 </androidx.constraintlayout.widget.ConstraintLayout>
