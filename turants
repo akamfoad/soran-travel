@@ -1,0 +1,317 @@
+[1mdiff --git a/.idea/gradle.xml b/.idea/gradle.xml[m
+[1mindex d291b3d..674414f 100644[m
+[1m--- a/.idea/gradle.xml[m
+[1m+++ b/.idea/gradle.xml[m
+[36m@@ -1,15 +1,20 @@[m
+ <?xml version="1.0" encoding="UTF-8"?>[m
+ <project version="4">[m
+[32m+[m[32m  <component name="GradleMigrationSettings" migrationVersion="1" />[m
+   <component name="GradleSettings">[m
+     <option name="linkedExternalProjectsSettings">[m
+       <GradleProjectSettings>[m
+[31m-        <compositeConfiguration>[m
+[31m-          <compositeBuild compositeDefinitionSource="SCRIPT" />[m
+[31m-        </compositeConfiguration>[m
+[32m+[m[32m        <option name="delegatedBuild" value="false" />[m
+[32m+[m[32m        <option name="testRunner" value="PLATFORM" />[m
+         <option name="distributionType" value="DEFAULT_WRAPPED" />[m
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />[m
+[32m+[m[32m        <option name="modules">[m
+[32m+[m[32m          <set>[m
+[32m+[m[32m            <option value="$PROJECT_DIR$" />[m
+[32m+[m[32m            <option value="$PROJECT_DIR$/app" />[m
+[32m+[m[32m          </set>[m
+[32m+[m[32m        </option>[m
+         <option name="resolveModulePerSourceSet" value="false" />[m
+[31m-        <option name="testRunner" value="PLATFORM" />[m
+       </GradleProjectSettings>[m
+     </option>[m
+   </component>[m
+[1mdiff --git a/app/src/main/java/com/fanaye/sorantravel/MainActivity.java b/app/src/main/java/com/fanaye/sorantravel/MainActivity.java[m
+[1mindex 78b30db..5f1aa30 100644[m
+[1m--- a/app/src/main/java/com/fanaye/sorantravel/MainActivity.java[m
+[1m+++ b/app/src/main/java/com/fanaye/sorantravel/MainActivity.java[m
+[36m@@ -45,7 +45,7 @@[m [mpublic class MainActivity extends AppCompatActivity {[m
+         // menu should be considered as top level destinations.[m
+ [m
+         mAppBarConfiguration = new AppBarConfiguration.Builder([m
+[31m-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.nav_hotels,[m
+[32m+[m[32m                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_hotels, R.id.nav_resturants, R.id.nav_where_to_go,[m
+                 R.id.nav_tools, R.id.nav_share)[m
+                 .setDrawerLayout(drawer)[m
+                 .build();[m
+[1mdiff --git a/app/src/main/java/com/fanaye/sorantravel/ui/home/HomeFragment.java b/app/src/main/java/com/fanaye/sorantravel/ui/home/HomeFragment.java[m
+[1mindex fcd0cc5..5b210ea 100644[m
+[1m--- a/app/src/main/java/com/fanaye/sorantravel/ui/home/HomeFragment.java[m
+[1m+++ b/app/src/main/java/com/fanaye/sorantravel/ui/home/HomeFragment.java[m
+[36m@@ -4,10 +4,14 @@[m [mimport android.os.Bundle;[m
+ import android.view.LayoutInflater;[m
+ import android.view.View;[m
+ import android.view.ViewGroup;[m
+[32m+[m[32mimport android.widget.Button;[m
+ import android.widget.ImageView;[m
+ [m
+ import androidx.annotation.NonNull;[m
+[32m+[m[32mimport androidx.annotation.Nullable;[m
+ import androidx.fragment.app.Fragment;[m
+[32m+[m[32mimport androidx.navigation.NavController;[m
+[32m+[m[32mimport androidx.navigation.Navigation;[m
+ [m
+ import com.fanaye.sorantravel.R;[m
+ import com.synnapps.carouselview.CarouselView;[m
+[36m@@ -17,7 +21,7 @@[m [mpublic class HomeFragment extends Fragment {[m
+ [m
+     //    private HomeViewModel homeViewModel;[m
+     CarouselView carouselview;[m
+[31m-    int[] sampleImages = {R.drawable.flowers, /*R.drawable.forest, */R.drawable.cut, R.drawable.dark};[m
+[32m+[m[32m    int[] sampleImages = {R.drawable.flowers,R.drawable.cut, R.drawable.dark};[m
+ [m
+ [m
+     ImageListener imagelistener = new ImageListener() {[m
+[36m@@ -44,4 +48,33 @@[m [mpublic class HomeFragment extends Fragment {[m
+ //        });[m
+         return root;[m
+     }[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {[m
+[32m+[m[32m        super.onViewCreated(view, savedInstanceState);[m
+[32m+[m[32m        final NavController navC = Navigation.findNavController(view);[m
+[32m+[m[32m        final Button hotelsBtn = view.findViewById(R.id.HotelBtn);[m
+[32m+[m[32m        hotelsBtn.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m[32m            @Override[m
+[32m+[m[32m            public void onClick(View view) {[m
+[32m+[m[32m                navC.navigate(R.id.action_nav_home_to_nav_hotels);[m
+[32m+[m[32m            }[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m[32m        final Button resturantBtn = view.findViewById(R.id.ResturantBtn);[m
+[32m+[m[32m        resturantBtn.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m[32m            @Override[m
+[32m+[m[32m            public void onClick(View view) {[m
+[32m+[m[32m                navC.navigate(R.id.action_nav_home_to_nav_resturants);[m
+[32m+[m[32m            }[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m[32m        final Button whereToGoBtn = view.findViewById(R.id.WhereToGoBtn);[m
+[32m+[m[32m        whereToGoBtn.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m[32m            @Override[m
+[32m+[m[32m            public void onClick(View view) {[m
+[32m+[m[32m                navC.navigate(R.id.action_nav_home_to_nav_where_to_go);[m
+[32m+[m[32m            }[m
+[32m+[m[32m        });[m
+[32m+[m[32m    }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/fragment_home.xml b/app/src/main/res/layout/fragment_home.xml[m
+[1mindex ebffc9c..f941b98 100644[m
+[1m--- a/app/src/main/res/layout/fragment_home.xml[m
+[1m+++ b/app/src/main/res/layout/fragment_home.xml[m
+[36m@@ -2,13 +2,16 @@[m
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"[m
+     xmlns:app="http://schemas.android.com/apk/res-auto"[m
+     android:layout_width="match_parent"[m
+[31m-    android:layout_height="match_parent">[m
+[32m+[m[32m    android:layout_height="match_parent"[m
+[32m+[m[32m    android:background="#00FFFFFF"[m
+[32m+[m[32m    android:paddingTop="5dp">[m
+ [m
+     <LinearLayout[m
+         android:id="@+id/carousilParent"[m
+[31m-        android:layout_width="409dp"[m
+[31m-        android:layout_height="306dp"[m
+[32m+[m[32m        android:layout_width="match_parent"[m
+[32m+[m[32m        android:layout_height="300dp"[m
+         android:orientation="horizontal"[m
+[32m+[m[32m        app:layout_constraintBottom_toTopOf="@+id/shortcuts_container"[m
+         app:layout_constraintEnd_toEndOf="parent"[m
+         app:layout_constraintStart_toStartOf="parent"[m
+         app:layout_constraintTop_toTopOf="parent">[m
+[36m@@ -16,18 +19,14 @@[m
+         <com.synnapps.carouselview.CarouselView[m
+             android:id="@+id/carouselmain"[m
+             android:layout_width="match_parent"[m
+[31m-            android:layout_height="302dp"[m
+[32m+[m[32m            android:layout_height="match_parent"[m
+             app:fillColor="#ffffff"[m
+             app:pageColor="#000000"[m
+             app:radius="6dp"[m
+             app:slideInterval="5000"[m
+             app:strokeColor="#f77777"[m
+[31m-            app:strokeWidth="1dp"></com.synnapps.carouselview.CarouselView>[m
+[32m+[m[32m            app:strokeWidth="1dp" />[m
+ [m
+[31m-        <LinearLayout[m
+[31m-            android:layout_width="match_parent"[m
+[31m-            android:layout_height="match_parent"[m
+[31m-            android:orientation="vertical"></LinearLayout>[m
+     </LinearLayout>[m
+ [m
+ [m
+[36m@@ -35,7 +34,7 @@[m
+         android:id="@+id/shortcuts_container"[m
+         android:layout_width="match_parent"[m
+         android:layout_height="wrap_content"[m
+[31m-        android:layout_marginTop="24dp"[m
+[32m+[m[32m        android:background="#7CCEFE"[m
+         android:gravity="center"[m
+         android:orientation="horizontal"[m
+         android:padding="5dp"[m
+[36m@@ -43,32 +42,36 @@[m
+         app:layout_constraintStart_toStartOf="parent"[m
+         app:layout_constraintTop_toBottomOf="@+id/carousilParent">[m
+ [m
+[31m-        <TextView[m
+[31m-            android:id="@+id/textView2"[m
+[32m+[m[32m        <Button[m
+[32m+[m[32m            android:id="@+id/HotelBtn"[m
+[32m+[m[32m            style="@style/Widget.AppCompat.Button.Borderless"[m
+             android:layout_width="wrap_content"[m
+             android:layout_height="wrap_content"[m
+             android:layout_weight="1"[m
+[31m-            android:text="hotels"[m
+[31m-            android:textSize="18sp"[m
+[31m-            android:textStyle="bold" />[m
+[32m+[m[32m            android:background="#00FFFFFF"[m
+[32m+[m[32m            android:drawableTop="@drawable/hotel_btn_icon"[m
+[32m+[m[32m            android:text="Hotels" />[m
+ [m
+[31m-        <TextView[m
+[31m-            android:id="@+id/textView3"[m
+[32m+[m[32m        <Button[m
+[32m+[m[32m            android:id="@+id/ResturantBtn"[m
+[32m+[m[32m            style="@style/Widget.AppCompat.Button.Borderless"[m
+             android:layout_width="wrap_content"[m
+             android:layout_height="wrap_content"[m
+             android:layout_weight="1"[m
+[31m-            android:text="resturants"[m
+[31m-            android:textSize="18sp"[m
+[31m-            android:textStyle="bold" />[m
+[32m+[m[32m            android:background="#00FFFFFF"[m
+[32m+[m[32m            android:drawableTop="@drawable/hamburger_btn_icon"[m
+[32m+[m[32m            android:text="Resturant" />[m
+ [m
+[31m-        <TextView[m
+[31m-            android:id="@+id/textView4"[m
+[32m+[m[32m        <Button[m
+[32m+[m[32m            android:id="@+id/WhereToGoBtn"[m
+[32m+[m[32m            style="@style/Widget.AppCompat.Button.Borderless"[m
+             android:layout_width="wrap_content"[m
+             android:layout_height="wrap_content"[m
+             android:layout_weight="1"[m
+[31m-            android:text="public"[m
+[31m-            android:textSize="18sp"[m
+[31m-            android:textStyle="bold" />[m
+[32m+[m[32m            android:background="#00FFFFFF"[m
+[32m+[m[32m            android:drawableTop="@drawable/where_to_go_btn_icon"[m
+[32m+[m[32m            android:text="Where To Go" />[m
+[32m+[m
+     </LinearLayout>[m
+ [m
+     <SearchView[m
+[36m@@ -79,7 +82,7 @@[m
+         android:tooltipText="@android:string/search_go"[m
+         app:layout_constraintHorizontal_bias="0.0"[m
+         app:layout_constraintStart_toStartOf="parent"[m
+[31m-        app:layout_constraintTop_toTopOf="parent" >[m
+[32m+[m[32m        app:layout_constraintTop_toTopOf="parent">[m
+ [m
+     </SearchView>[m
+ [m
+[1mdiff --git a/app/src/main/res/menu/activity_main_drawer.xml b/app/src/main/res/menu/activity_main_drawer.xml[m
+[1mindex 9822a98..2e06da1 100644[m
+[1m--- a/app/src/main/res/menu/activity_main_drawer.xml[m
+[1m+++ b/app/src/main/res/menu/activity_main_drawer.xml[m
+[36m@@ -24,6 +24,15 @@[m
+             android:id="@+id/nav_hotels"[m
+             android:icon="@drawable/ic_menu_hotel"[m
+             android:title="@string/menu_hotels" />[m
+[32m+[m[32m        <item[m
+[32m+[m[32m            android:id="@+id/nav_resturants"[m
+[32m+[m[32m            android:icon="@drawable/ic_menu_hotel"[m
+[32m+[m[32m            android:title="@string/menu_restaurants" />[m
+[32m+[m[32m        <item[m
+[32m+[m[32m            android:id="@+id/nav_where_to_go"[m
+[32m+[m[32m            android:icon="@drawable/ic_menu_hotel"[m
+[32m+[m[32m            android:title="@string/menu_where_to_go" />[m
+[32m+[m
+     </group>[m
+ [m
+     <item android:title="Communicate">[m
+[1mdiff --git a/app/src/main/res/navigation/mobile_navigation.xml b/app/src/main/res/navigation/mobile_navigation.xml[m
+[1mindex 486f7e6..f69a0c9 100644[m
+[1m--- a/app/src/main/res/navigation/mobile_navigation.xml[m
+[1m+++ b/app/src/main/res/navigation/mobile_navigation.xml[m
+[36m@@ -9,7 +9,17 @@[m
+         android:id="@+id/nav_home"[m
+         android:name="com.fanaye.sorantravel.ui.home.HomeFragment"[m
+         android:label="@string/menu_home"[m
+[31m-        tools:layout="@layout/fragment_home" />[m
+[32m+[m[32m        tools:layout="@layout/fragment_home">[m
+[32m+[m[32m        <action[m
+[32m+[m[32m            android:id="@+id/action_nav_home_to_nav_hotels"[m
+[32m+[m[32m            app:destination="@id/nav_hotels" />[m
+[32m+[m[32m        <action[m
+[32m+[m[32m            android:id="@+id/action_nav_home_to_nav_where_to_go"[m
+[32m+[m[32m            app:destination="@id/nav_where_to_go" />[m
+[32m+[m[32m        <action[m
+[32m+[m[32m            android:id="@+id/action_nav_home_to_nav_resturants"[m
+[32m+[m[32m            app:destination="@id/nav_resturants" />[m
+[32m+[m[32m    </fragment>[m
+ [m
+     <fragment[m
+         android:id="@+id/nav_gallery"[m
+[36m@@ -40,5 +50,15 @@[m
+         android:name="com.fanaye.sorantravel.ui.hotels.HotelsFragment"[m
+         android:label="@string/menu_hotels"[m
+         tools:layout="@layout/fragment_hotels" />[m
+[32m+[m[32m    <fragment[m
+[32m+[m[32m        android:id="@+id/nav_resturants"[m
+[32m+[m[32m        android:name="com.fanaye.sorantravel.ui.resturants.ResturantsFragment"[m
+[32m+[m[32m        android:label="Restaurants"[m
+[32m+[m[32m        tools:layout="@layout/resturants_fragment" />[m
+[32m+[m[32m    <fragment[m
+[32m+[m[32m        android:id="@+id/nav_where_to_go"[m
+[32m+[m[32m        android:name="com.fanaye.sorantravel.ui.wheretogo.WhereToGo"[m
+[32m+[m[32m        android:label="Where To Go "[m
+[32m+[m[32m        tools:layout="@layout/where_to_go_fragment" />[m
+ [m
+ </navigation>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml[m
+[1mindex f6cf0e1..f38cd08 100644[m
+[1m--- a/app/src/main/res/values/strings.xml[m
+[1m+++ b/app/src/main/res/values/strings.xml[m
+[36m@@ -18,4 +18,6 @@[m
+     <string name="menu_share">Share</string>[m
+     <string name="menu_send">Send</string>[m
+     <string name="menu_hotels">Hotels</string>[m
+[32m+[m[32m    <string name="menu_restaurants">Restaurants</string>[m
+[32m+[m[32m    <string name="menu_where_to_go">Where To Go</string>[m
+ </resources>[m
+[1mdiff --git a/build.gradle b/build.gradle[m
+[1mindex a5bb815..dcaeef2 100644[m
+[1m--- a/build.gradle[m
+[1m+++ b/build.gradle[m
+[36m@@ -7,7 +7,7 @@[m [mbuildscript {[m
+         [m
+     }[m
+     dependencies {[m
+[31m-        classpath 'com.android.tools.build:gradle:3.5.3'[m
+[32m+[m[32m        classpath 'com.android.tools.build:gradle:3.6.1'[m
+         [m
+         // NOTE: Do not place your application dependencies here; they belong[m
+         // in the individual module build.gradle files[m
+[1mdiff --git a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties[m
+[1mindex e20e6dd..1cf8cc2 100644[m
+[1m--- a/gradle/wrapper/gradle-wrapper.properties[m
+[1m+++ b/gradle/wrapper/gradle-wrapper.properties[m
+[36m@@ -1,6 +1,6 @@[m
+[31m-#Mon Feb 10 14:48:01 AST 2020[m
+[32m+[m[32m#Sat Mar 21 22:33:32 AST 2020[m
+ distributionBase=GRADLE_USER_HOME[m
+ distributionPath=wrapper/dists[m
+ zipStoreBase=GRADLE_USER_HOME[m
+ zipStorePath=wrapper/dists[m
+[31m-distributionUrl=https\://services.gradle.org/distributions/gradle-5.4.1-all.zip[m
+[32m+[m[32mdistributionUrl=https\://services.gradle.org/distributions/gradle-5.6.4-all.zip[m

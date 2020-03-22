@@ -18,4 +18,6 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="menu_hotels">Hotels</string>
+    <string name="menu_restaurants">Restaurants</string>
+    <string name="menu_where_to_go">Where To Go</string>
 </resources>

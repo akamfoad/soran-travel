@@ -2,13 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:paddingTop="5dp">
 
     <LinearLayout
         android:id="@+id/carousilParent"
-        android:layout_width="409dp"
-        android:layout_height="306dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/shortcuts_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -16,18 +19,14 @@
         <com.synnapps.carouselview.CarouselView
             android:id="@+id/carouselmain"
             android:layout_width="match_parent"
-            android:layout_height="302dp"
+            android:layout_height="match_parent"
             app:fillColor="#ffffff"
             app:pageColor="#000000"
             app:radius="6dp"
             app:slideInterval="5000"
             app:strokeColor="#f77777"
-            app:strokeWidth="1dp"></com.synnapps.carouselview.CarouselView>
+            app:strokeWidth="1dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
     </LinearLayout>
 
 
@@ -35,7 +34,7 @@
         android:id="@+id/shortcuts_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:background="#7CCEFE"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="5dp"
@@ -43,32 +42,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/carousilParent">
 
-        <TextView
-            android:id="@+id/textView2"
+        <Button
+            android:id="@+id/HotelBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="hotels"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:background="#00FFFFFF"
+            android:drawableTop="@drawable/hotel_btn_icon"
+            android:text="Hotels" />
 
-        <TextView
-            android:id="@+id/textView3"
+        <Button
+            android:id="@+id/ResturantBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="resturants"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:background="#00FFFFFF"
+            android:drawableTop="@drawable/hamburger_btn_icon"
+            android:text="Resturant" />
 
-        <TextView
-            android:id="@+id/textView4"
+        <Button
+            android:id="@+id/WhereToGoBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="public"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:background="#00FFFFFF"
+            android:drawableTop="@drawable/where_to_go_btn_icon"
+            android:text="Where To Go" />
+
     </LinearLayout>
 
     <SearchView
@@ -79,7 +82,7 @@
         android:tooltipText="@android:string/search_go"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
     </SearchView>
 
