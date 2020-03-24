@@ -14,12 +14,8 @@
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-        <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:icon="@drawable/ic_menu_video"
+            android:title="@string/menu_video" />
         <item
             android:id="@+id/nav_hotels"
             android:icon="@drawable/ic_menu_hotel"
@@ -32,7 +28,10 @@
             android:id="@+id/nav_where_to_go"
             android:icon="@drawable/ic_menu_where_to_go"
             android:title="@string/menu_where_to_go" />
-
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_setting"
+            android:title="@string/menu_tools" />
     </group>
 
     <item android:title="Communicate">
