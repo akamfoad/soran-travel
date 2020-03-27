@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_videos"
             android:icon="@drawable/ic_menu_video"
-            android:title="@string/menu_video" />
+            android:title="@string/menu_videos" />
         <item
             android:id="@+id/nav_hotels"
             android:icon="@drawable/ic_menu_hotel"

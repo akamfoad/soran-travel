@@ -13,11 +13,14 @@
     <!--  Hotel view resources - start  -->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
-    <string name="menu_video">Videos</string>
+    <string name="menu_videos">Videos</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="menu_hotels">Hotels</string>
     <string name="menu_restaurants">Restaurants</string>
     <string name="menu_where_to_go">Where To Go</string>
+
+    <!--    home UI strs-->
+    <string name="WIKIPEDIA_REFERENCE_TEXT">Read On <a href="https://en.wikipedia.org/wiki/Soran,_Iraq">Wikipedia.com</a></string>
 </resources>

@@ -28,10 +28,10 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.fanaye.sorantravel.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_video"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_videos"
+        android:name="com.fanaye.sorantravel.ui.videos.VideosFragment"
+        android:label="@string/menu_videos"
+        tools:layout="@layout/fragment_videos" />
 
     <fragment
         android:id="@+id/nav_setting"

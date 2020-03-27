@@ -1,16 +1,16 @@
-package com.fanaye.sorantravel.ui.slideshow;
+package com.fanaye.sorantravel.ui.videos;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class VideosViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public VideosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is videos fragment");
     }
 
     public LiveData<String> getText() {
