@@ -31,7 +31,7 @@ public class HotelListAdapter extends RecyclerView.Adapter<HotelListAdapter.Hote
     @NonNull
     @Override
     public HotelListAdapter.HotelViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View hotelView = inflater.inflate(R.layout.hotel, parent, false);
+        View hotelView = inflater.inflate(R.layout.place, parent, false);
         return new HotelViewHolder(hotelView, this);
     }
 
@@ -60,8 +60,8 @@ public class HotelListAdapter extends RecyclerView.Adapter<HotelListAdapter.Hote
 
         public HotelViewHolder(@NonNull View itemView, HotelListAdapter hotelListAdapter) {
             super(itemView);
-            this.hotelName = itemView.findViewById(R.id.hotelName);
-            this.ratingBar = itemView.findViewById(R.id.hotelRating);
+            this.hotelName = itemView.findViewById(R.id.placeName);
+            this.ratingBar = itemView.findViewById(R.id.placeRating);
             this.phoneNo = itemView.findViewById(R.id.phone_no);
             this.adapter = hotelListAdapter;
         }

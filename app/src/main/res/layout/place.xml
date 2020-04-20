@@ -26,7 +26,7 @@
 
 
         <ImageView
-            android:id="@+id/hotelThumbnail"
+            android:id="@+id/placeThumbnail"
             android:layout_width="match_parent"
             android:layout_height="234dp"
             android:contentDescription="@string/soran_palace_hotel_desc"
@@ -41,12 +41,12 @@
             android:contextClickable="true">
 
             <TextView
-                android:id="@+id/hotelName"
+                android:id="@+id/placeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="HOTEL"
+                android:text="PLACE"
                 android:textColor="#000000"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -54,7 +54,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <RatingBar
-                android:id="@+id/hotelRating"
+                android:id="@+id/placeRating"
                 style="@style/Widget.AppCompat.RatingBar"
                 android:layout_width="244dp"
                 android:layout_height="47dp"
@@ -68,7 +68,7 @@
                 android:rating="4"
                 android:stepSize="0.1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hotelName" />
+                app:layout_constraintTop_toBottomOf="@+id/placeName" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -80,7 +80,7 @@
                 android:textColor="#000000"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hotelRating" />
+                app:layout_constraintTop_toBottomOf="@+id/placeRating" />
 
             <TextView
                 android:id="@+id/phone_no"

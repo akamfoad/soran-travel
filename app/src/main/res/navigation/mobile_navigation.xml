@@ -54,7 +54,7 @@
         android:id="@+id/nav_resturants"
         android:name="com.fanaye.sorantravel.ui.resturants.ResturantsFragment"
         android:label="Restaurants"
-        tools:layout="@layout/resturants_fragment" />
+        tools:layout="@layout/fragment_restaurants" />
     <fragment
         android:id="@+id/nav_where_to_go"
         android:name="com.fanaye.sorantravel.ui.wheretogo.WhereToGo"
