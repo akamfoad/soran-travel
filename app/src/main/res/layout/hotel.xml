@@ -1,62 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="16dp"
+    android:background="@drawable/card_bg"
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:elevation="10dp"
+    android:overScrollMode="never"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
 
-    <ImageView
-        android:id="@+id/hotelThumbnail"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="234dp"
-        android:contentDescription="@string/soran_palace_hotel_desc"
-        app:srcCompat="@drawable/soran_palas_hotel" />
+        android:layout_height="match_parent"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:forceHasOverlappingRendering="true"
+        android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/hotelName"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/hotelThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="234dp"
+            android:contentDescription="@string/soran_palace_hotel_desc"
+            android:cropToPadding="false"
+            android:forceHasOverlappingRendering="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/soran_palas_hotel" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/hotel_name"
-            android:textColor="@android:color/primary_text_dark"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:contextClickable="true">
 
-        <RatingBar
-            android:id="@+id/hotelRating"
-            android:layout_width="244dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:alpha="0.9"
-            android:max="5"
-            android:min="0"
-            android:numStars="5"
-            android:progress="0"
-            android:rating="3.9"
-            android:stepSize="0.1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hotelName" />
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="HOTEL"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/contacts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:text="Contacts:\nPhone: 0750 671 4343"
-            android:textColor="@android:color/primary_text_dark"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hotelRating" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <RatingBar
+                android:id="@+id/hotelRating"
+                style="@style/Widget.AppCompat.RatingBar"
+                android:layout_width="244dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:alpha="0.9"
+                android:max="5"
+                android:min="0"
+                android:numStars="5"
+                android:progress="0"
+                android:rating="4"
+                android:stepSize="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotelName" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Phone no"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotelRating" />
+
+            <TextView
+                android:id="@+id/phone_no"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Contacts"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
