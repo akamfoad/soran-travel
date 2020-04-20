@@ -272,7 +272,7 @@
 [32m+[m[32m        tools:layout="@layout/resturants_fragment" />[m
 [32m+[m[32m    <fragment[m
 [32m+[m[32m        android:id="@+id/nav_where_to_go"[m
-[32m+[m[32m        android:name="com.fanaye.sorantravel.ui.wheretogo.WhereToGo"[m
+[32m+[m[32m        android:name="com.fanaye.sorantravel.ui.wheretogo.WhereToGoFragment"[m
 [32m+[m[32m        android:label="Where To Go "[m
 [32m+[m[32m        tools:layout="@layout/where_to_go_fragment" />[m
  [m
