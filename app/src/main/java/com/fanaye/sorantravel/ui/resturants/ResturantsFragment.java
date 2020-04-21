@@ -13,32 +13,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fanaye.sorantravel.R;
 
-import java.util.LinkedList;
-
 public class ResturantsFragment extends Fragment {
 
-    private RestaurantViewModel mViewModel;
+    private RestaurantViewModel restaurantViewModel;
     private RecyclerView recyclerView;
     private RestaurantListAdapter restaurantListAdapter;
-    private LinkedList<String> restaurantNames = new LinkedList<>();
-    private LinkedList<Float> restaurantRatings = new LinkedList<>();
-    private LinkedList<String> restaurantPhoneNos = new LinkedList<>();
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        restaurantNames.add("Soran Palace");
-        restaurantPhoneNos.add("07704707080");
-        restaurantRatings.add(3.2f);
-        restaurantNames.add("Diana Palace");
-        restaurantPhoneNos.add("07704707080");
-        restaurantRatings.add(4.5f);
-        restaurantNames.add("Something Palace");
-        restaurantPhoneNos.add("07704707080");
-        restaurantRatings.add(2.7f);
         View root = inflater.inflate(R.layout.fragment_restaurants, container, false);
         recyclerView = root.findViewById(R.id.linear_layout_restaurant);
-        restaurantListAdapter = new RestaurantListAdapter(this.getContext(), restaurantNames, restaurantRatings, restaurantPhoneNos);
+        restaurantViewModel = new RestaurantViewModel(getActivity().getApplication());
+        restaurantListAdapter = new RestaurantListAdapter(this, getContext(), restaurantViewModel);
+        restaurantViewModel.getRestaurants().observe(getViewLifecycleOwner(), list -> restaurantListAdapter.submitList(list));
         recyclerView.setAdapter(restaurantListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
         return root;
