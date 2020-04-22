@@ -1,64 +1,86 @@
 package com.fanaye.sorantravel.ui.wheretogo;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fanaye.sorantravel.R;
+import com.fanaye.sorantravel.db.Images.Images;
+import com.fanaye.sorantravel.db.WhereToGo.WhereToGo;
 
-import java.util.LinkedList;
+public class WhereToGoListAdapter extends ListAdapter<WhereToGo, WhereToGoListAdapter.WhereToGoViewHolder> {
 
-public class WhereToGoListAdapter extends RecyclerView.Adapter<WhereToGoListAdapter.WhereToGoViewHolder> {
+    private static final DiffUtil.ItemCallback<WhereToGo> DIFF_CB = new DiffUtil.ItemCallback<WhereToGo>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull WhereToGo oldItem, @NonNull WhereToGo newItem) {
+            return oldItem.getUniqueId().equals(newItem.getUniqueId());
+        }
 
-    private final LinkedList<String> whereToGoNames;
-    private final LinkedList<String> whereToGoDesc;
+        @Override
+        public boolean areContentsTheSame(@NonNull WhereToGo oldItem, @NonNull WhereToGo newItem) {
+            return this.areItemsTheSame(oldItem, newItem);
+        }
+    };
+    final Fragment owner;
+    private final Context context;
     private LayoutInflater inflater;
+    private WhereToGoViewModel whereToGoViewModel;
 
-    public WhereToGoListAdapter(Context context, LinkedList<String> whereToGoNames, LinkedList<String> whereToGoDesc) {
-        this.whereToGoNames = whereToGoNames;
+    protected WhereToGoListAdapter(Fragment owner, Context context, WhereToGoViewModel whereToGoViewModel) {
+        super(DIFF_CB);
+        this.owner = owner;
+        this.context = context;
         inflater = LayoutInflater.from(context);
-        this.whereToGoDesc = whereToGoDesc;
+        this.whereToGoViewModel = whereToGoViewModel;
     }
 
     @NonNull
     @Override
-    public WhereToGoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public WhereToGoListAdapter.WhereToGoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View whereToGoView = inflater.inflate(R.layout.where_to_go, parent, false);
-        return new WhereToGoViewHolder(whereToGoView, this);
+        return new WhereToGoViewHolder(whereToGoView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull WhereToGoViewHolder holder, int position) {
-        String currentWhereToGoName = whereToGoNames.get(position);
-        String currentWhereToGoDesc = whereToGoDesc.get(position);
-        holder.wtgName.setText(currentWhereToGoName);
-        holder.wtgDesc.setText(currentWhereToGoDesc);
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return whereToGoNames.size();
-
+    public void onBindViewHolder(@NonNull WhereToGoListAdapter.WhereToGoViewHolder holder, int position) {
+        WhereToGo current = getItem(position);
+        whereToGoViewModel.getOneImagesOf(current.getUniqueId()).observe(this.owner.getViewLifecycleOwner(), new Observer<Images>() {
+            @Override
+            public void onChanged(Images images) {
+                holder.wtgThumbnail.setImageBitmap(BitmapFactory.decodeByteArray(images.getPicture(), 0, images.getPicture().length));
+            }
+        });
+        holder.wtgName.setText(current.getName());
+        holder.wtgDesc.setText(current.getTextInfo());
     }
 
     class WhereToGoViewHolder extends RecyclerView.ViewHolder {
-        final TextView wtgName;
-        final TextView wtgDesc;
-        final WhereToGoListAdapter adapter;
+        private TextView wtgName;
+        private TextView wtgDesc;
+        private ImageView wtgThumbnail;
 
-
-        public WhereToGoViewHolder(@NonNull View itemView, WhereToGoListAdapter hotelListAdapter) {
+        WhereToGoViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.wtgName = itemView.findViewById(R.id.wtgName);
-            this.wtgDesc = itemView.findViewById(R.id.wtgDesc);
-            this.adapter = hotelListAdapter;
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    owner.getActivity().finish();
+                }
+            });
+            wtgName = itemView.findViewById(R.id.wtgName);
+            wtgDesc = itemView.findViewById(R.id.wtgDesc);
+            wtgThumbnail = itemView.findViewById(R.id.wtgThumbnail);
         }
     }
-
 }
