@@ -59,6 +59,19 @@
         android:id="@+id/nav_where_to_go"
         android:name="com.fanaye.sorantravel.ui.wheretogo.WhereToGoFragment"
         android:label="Where To Go "
-        tools:layout="@layout/fragment_where_to_go_s" />
+        tools:layout="@layout/fragment_where_to_go_s">
+        <action
+            android:id="@+id/action_nav_where_to_go_to_WTGShow"
+            app:destination="@id/WTGShow" />
+    </fragment>
+    <fragment
+        android:id="@+id/WTGShow"
+        android:name="com.fanaye.sorantravel.ui.wtgShow.WTGShow"
+        android:label="wtg_show_fragment"
+        tools:layout="@layout/wtg_show_fragment">
+        <argument
+            android:name="UID"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

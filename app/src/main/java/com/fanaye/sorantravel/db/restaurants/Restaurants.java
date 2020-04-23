@@ -18,12 +18,8 @@ public class Restaurants {
     private String name;
 
     @NonNull
-    @ColumnInfo(name = "lng")
-    private double lng;
-
-    @NonNull
-    @ColumnInfo(name = "lat")
-    private double lat;
+    @ColumnInfo(name = "plus_code")
+    private String plusCode;
 
     @ColumnInfo(name = "phone_no")
     private String phoneNo;
@@ -49,11 +45,10 @@ public class Restaurants {
     @ColumnInfo(name = "website")
     private String website;
 
-    public Restaurants(@NonNull String uniqueId, @NonNull String name, double lng, double lat, String phoneNo, @NonNull String openFrom, @NonNull String closeAt, Double rating, Integer noOfRaters, String location, String website) {
+    public Restaurants(@NonNull String uniqueId, @NonNull String name, @NonNull String plusCode, String phoneNo, @NonNull String openFrom, @NonNull String closeAt, Double rating, Integer noOfRaters, String location, String website) {
         this.uniqueId = uniqueId;
         this.name = name;
-        this.lng = lng;
-        this.lat = lat;
+        this.plusCode = plusCode;
         this.phoneNo = phoneNo;
         this.openFrom = openFrom;
         this.closeAt = closeAt;
@@ -73,12 +68,8 @@ public class Restaurants {
         return name;
     }
 
-    public double getLng() {
-        return lng;
-    }
-
-    public double getLat() {
-        return lat;
+    public String getPlusCode() {
+        return plusCode;
     }
 
     public String getPhoneNo() {

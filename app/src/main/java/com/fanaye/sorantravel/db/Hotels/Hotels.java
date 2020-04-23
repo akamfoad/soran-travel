@@ -17,11 +17,9 @@ public class Hotels {
     @ColumnInfo(name = "name")
     private String name;
 
-    @ColumnInfo(name = "lng")
-    private double lng;
-
-    @ColumnInfo(name = "lat")
-    private double lat;
+    @NonNull
+    @ColumnInfo(name = "plus_code")
+    private String plusCode;
 
     @ColumnInfo(name = "phone_no")
     private String phoneNo;
@@ -45,11 +43,10 @@ public class Hotels {
     @ColumnInfo(name = "website")
     private String website;
 
-    public Hotels(@NonNull String uniqueId, @NonNull String name, double lng, double lat, String phoneNo, Double rating, Integer noOfRaters, @NonNull String location, @NonNull String prices, String website) {
+    public Hotels(@NonNull String uniqueId, @NonNull String name, @NonNull String plusCode, String phoneNo, Double rating, Integer noOfRaters, @NonNull String location, @NonNull String prices, String website) {
         this.uniqueId = uniqueId;
         this.name = name;
-        this.lng = lng;
-        this.lat = lat;
+        this.plusCode = plusCode;
         this.phoneNo = phoneNo;
         this.rating = rating;
         this.noOfRaters = noOfRaters;
@@ -68,12 +65,9 @@ public class Hotels {
         return name;
     }
 
-    public double getLng() {
-        return lng;
-    }
-
-    public double getLat() {
-        return lat;
+    @NonNull
+    public String getPlusCode() {
+        return plusCode;
     }
 
     public String getPhoneNo() {
