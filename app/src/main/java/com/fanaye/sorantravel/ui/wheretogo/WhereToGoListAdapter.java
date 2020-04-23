@@ -2,6 +2,7 @@ package com.fanaye.sorantravel.ui.wheretogo;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
@@ -63,6 +66,15 @@ public class WhereToGoListAdapter extends ListAdapter<WhereToGo, WhereToGoListAd
         });
         holder.wtgName.setText(current.getName());
         holder.wtgDesc.setText(current.getTextInfo());
+
+        NavController navController = Navigation.findNavController(owner.getView());
+        final Bundle data = new Bundle();
+        data.putString("UID", current.getUniqueId());
+
+        holder.itemView.setOnClickListener(view -> {
+            navController.navigate(R.id.action_nav_where_to_go_to_WTGShow, data);
+        });
+
     }
 
     class WhereToGoViewHolder extends RecyclerView.ViewHolder {
@@ -72,12 +84,6 @@ public class WhereToGoListAdapter extends ListAdapter<WhereToGo, WhereToGoListAd
 
         WhereToGoViewHolder(@NonNull View itemView) {
             super(itemView);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    owner.getActivity().finish();
-                }
-            });
             wtgName = itemView.findViewById(R.id.wtgName);
             wtgDesc = itemView.findViewById(R.id.wtgDesc);
             wtgThumbnail = itemView.findViewById(R.id.wtgThumbnail);

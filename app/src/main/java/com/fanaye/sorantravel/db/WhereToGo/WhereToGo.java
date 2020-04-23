@@ -18,13 +18,9 @@ public class WhereToGo {
     @ColumnInfo(name = "name")
     private String name;
 
-
-    @ColumnInfo(name = "lng")
-    private double lng;
-
-    @ColumnInfo(name = "lat")
-    private double lat;
-
+    @NonNull
+    @ColumnInfo(name = "plus_code")
+    private String plusCode;
 
     @NonNull
     @ColumnInfo(name = "text_info")
@@ -35,11 +31,10 @@ public class WhereToGo {
     private String location;
 
 
-    public WhereToGo(@NonNull String uniqueId, @NonNull String name, double lng, double lat, String textInfo, String location) {
+    public WhereToGo(@NonNull String uniqueId, @NonNull String name, @NonNull String plusCode, String textInfo, String location) {
         this.uniqueId = uniqueId;
         this.name = name;
-        this.lng = lng;
-        this.lat = lat;
+        this.plusCode = plusCode;
         this.textInfo = textInfo;
         this.location = location;
     }
@@ -52,12 +47,8 @@ public class WhereToGo {
         return this.name;
     }
 
-    public double getLng() {
-        return this.lng;
-    }
-
-    public double getLat() {
-        return this.lat;
+    public String getPlusCode() {
+        return this.plusCode;
     }
 
     public String getTextInfo() {
