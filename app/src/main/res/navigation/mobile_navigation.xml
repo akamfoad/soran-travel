@@ -54,7 +54,11 @@
         android:id="@+id/nav_resturants"
         android:name="com.fanaye.sorantravel.ui.resturants.ResturantsFragment"
         android:label="Restaurants"
-        tools:layout="@layout/fragment_restaurants" />
+        tools:layout="@layout/fragment_restaurants">
+        <action
+            android:id="@+id/action_nav_resturants_to_restaurantShow"
+            app:destination="@id/restaurantShow" />
+    </fragment>
     <fragment
         android:id="@+id/nav_where_to_go"
         android:name="com.fanaye.sorantravel.ui.wheretogo.WhereToGoFragment"
@@ -69,6 +73,14 @@
         android:name="com.fanaye.sorantravel.ui.wtgShow.WTGShow"
         android:label="wtg_show_fragment"
         tools:layout="@layout/wtg_show_fragment">
+        <argument
+            android:name="UID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantShow"
+        android:name="com.fanaye.sorantravel.ui.resShow.RestaurantShow"
+        android:label="RestaurantShow">
         <argument
             android:name="UID"
             app:argType="string" />
