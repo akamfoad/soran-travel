@@ -2,6 +2,7 @@ package com.fanaye.sorantravel.ui.hotels;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
@@ -64,6 +67,13 @@ public class HotelListAdapter extends ListAdapter<Hotels, HotelListAdapter.Hotel
         holder.hotelName.setText(current.getName());
         holder.ratingBar.setRating(current.getRating().floatValue());
         holder.phoneNo.setText(current.getPhoneNo());
+        NavController navController = Navigation.findNavController(owner.getView());
+        final Bundle data = new Bundle();
+        data.putString("UID", current.getUniqueId());
+
+        holder.itemView.setOnClickListener(view -> {
+            navController.navigate(R.id.action_nav_hotels_to_hotelShowFragment, data);
+        });
     }
 
 
