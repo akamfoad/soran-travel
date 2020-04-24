@@ -2,6 +2,7 @@ package com.fanaye.sorantravel.ui.resturants;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
@@ -52,8 +55,6 @@ public class RestaurantListAdapter extends ListAdapter<Restaurants, RestaurantLi
     @Override
     public void onBindViewHolder(@NonNull RestaurantListAdapter.RestaurantViewHolder holder, int position) {
         Restaurants current = getItem(position);
-        System.out.println("current Restaurants Size: " + getCurrentList().size());
-
         restaurantViewModel.getOneImagesOf(
                 current.getUniqueId()
         ).observe(this.owner.getViewLifecycleOwner(),
@@ -64,6 +65,15 @@ public class RestaurantListAdapter extends ListAdapter<Restaurants, RestaurantLi
         holder.restaurantName.setText(current.getName());
         holder.ratingBar.setRating(current.getRating().floatValue());
         holder.phoneNo.setText(current.getPhoneNo().equals("") ? "not supplied" : current.getPhoneNo());
+
+        NavController navController = Navigation.findNavController(owner.getView());
+        final Bundle data = new Bundle();
+        data.putString("UID", current.getUniqueId());
+
+        holder.itemView.setOnClickListener(view -> {
+            navController.navigate(R.id.action_nav_resturants_to_restaurantShow, data);
+        });
+
     }
 
     static class RestaurantViewHolder extends RecyclerView.ViewHolder {
