@@ -7,58 +7,62 @@
     android:layout_height="match_parent"
     tools:context=".ui.wtgShow.WTGShow">
 
-    <com.synnapps.carouselview.CarouselView
-        android:id="@+id/wtg_show_carousel"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:fillColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:pageColor="#00000000"
-        app:radius="6dp"
-        app:slideInterval="5000"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="1dp">
-
-    </com.synnapps.carouselview.CarouselView>
-
-    <TextView
-        android:id="@+id/wtgName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="placeholder"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wtg_show_carousel" />
-
     <ScrollView
+        android:id="@+id/body_scroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/belt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wtgName">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/wtg_show_carousel"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:fillColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:slideInterval="5000"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="1dp">
+
+            </com.synnapps.carouselview.CarouselView>
+
+            <TextView
+                android:id="@+id/wtgName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="placeholder"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wtg_show_carousel" />
 
             <TextView
                 android:id="@+id/wtgDesc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
                 android:text="DESC"
                 android:textSize="18sp"
-                app:fontFamily="sans-serif" />
-        </LinearLayout>
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wtgName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <View
