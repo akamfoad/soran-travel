@@ -60,6 +60,10 @@ public class Repository {
         return imagesDao.getOneImagesOf(id);
     }
 
+    public LiveData<Images> getOneImage(String id) {
+        return imagesDao.getOneImage(id);
+    }
+
     public LiveData<List<Hotels>> getHotelsList() {
         return hotelsList;
     }

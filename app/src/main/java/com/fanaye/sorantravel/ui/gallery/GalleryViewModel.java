@@ -1,19 +1,27 @@
 package com.fanaye.sorantravel.ui.gallery;
 
+import android.app.Application;
+
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+import com.fanaye.sorantravel.db.Images.Images;
+import com.fanaye.sorantravel.db.Repository;
 
-    private MutableLiveData<String> mText;
+import java.util.List;
 
-    public GalleryViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+public class GalleryViewModel extends AndroidViewModel {
+    private Repository repository;
+    private LiveData<List<Images>> images;
+
+    public GalleryViewModel(Application application) {
+        super(application);
+        repository = new Repository(application);
+        images = repository.getImagesList();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+
+    public LiveData<List<Images>> getAllImages() {
+        return images;
     }
 }

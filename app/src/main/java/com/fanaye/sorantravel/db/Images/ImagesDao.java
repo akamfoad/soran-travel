@@ -16,4 +16,7 @@ public interface ImagesDao {
 
     @Query("SELECT * FROM images WHERE image_of_where = :UID LIMIT 1")
     LiveData<Images> getOneImagesOf(String UID);
+
+    @Query("SELECT * FROM images WHERE uniqueid = :UID LIMIT 1")
+    LiveData<Images> getOneImage(String UID);
 }
