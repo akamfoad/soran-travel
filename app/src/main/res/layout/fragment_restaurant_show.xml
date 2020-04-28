@@ -177,7 +177,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:text="Rating:"
+                    android:text="@string/rating_label"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -194,7 +194,7 @@
                     android:id="@+id/no_of_raters"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6 Reviews"
+                    android:text="@string/no_of_raters_text"
                     app:layout_constraintBottom_toBottomOf="@+id/rating"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/rating"

@@ -52,7 +52,7 @@
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:drawableTop="@drawable/hotel_btn_icon"
-                    android:text="Hotels" />
+                    android:text="@string/FG_home_HOTELS_BTN" />
 
                 <Button
                     android:id="@+id/ResturantBtn"
@@ -62,7 +62,7 @@
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:drawableTop="@drawable/hamburger_btn_icon"
-                    android:text="Resturant" />
+                    android:text="@string/FG_home_RESTAURANTS_BTN" />
 
                 <Button
                     android:id="@+id/WhereToGoBtn"
@@ -72,7 +72,7 @@
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:drawableTop="@drawable/where_to_go_btn_icon"
-                    android:text="Where To Go" />
+                    android:text="@string/FG_home_WTG_BTN" />
 
             </LinearLayout>
 
@@ -80,13 +80,13 @@
                 android:id="@+id/about_title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="24dp"
 
                 android:background="@drawable/about_text_caption_bg_radius"
                 android:fontFamily="sans-serif"
                 android:paddingHorizontal="5dp"
-                android:text="About"
+                android:text="@string/about_title_text"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
-                    android:text="General Info:"
+                    android:text="@string/GENERAL_INFO_TITLE_TEXT"
                     android:textColor="#ff000000"
                     android:textSize="18sp" />
 
@@ -119,7 +119,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
-                    android:text="Soran (Kurdish: سۆران ,Soran‎) or Diana is a city in Erbil Governorate, and the capital of Soran District. Diana is one of the largest cities in Kurdistan Region, and is expected to increase within the next ten years by a further 50,000 people. "
+                    android:text="@string/GENERAL_INFO_TEXT"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
@@ -129,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Title:"
+                    android:text="@string/ETYMOLOGY_TITLE_TEXT"
                     android:textColor="#ff000000"
                     android:textSize="18sp" />
 
@@ -138,7 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
-                    android:text='The name Diana is derived from the Kurdish word for "Christian", since it was originally an Assyrian Christian village prior to expanding in the last 20 years. The Name Soran is derived from the Kurdish Soran tribe who have settled in this area along with the Assyrians. '
+                    android:text="@string/ETYMOLOGY_TEXT"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
@@ -148,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
-                    android:text="History:"
+                    android:text="@string/HISTORY_TITLE_TEXT"
                     android:textColor="#ff000000"
                     android:textSize="18sp" />
 
@@ -157,7 +157,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
-                    android:text="The city of Diana was originally a small village inhabited by Nochiya Assyrians of the Rawanduz Clan ruled by Kurdish Aghas of the Soran tribe,[4] and continued to be for many years up until an influx of Kurdish refugees turned it into a large city. Since the early 1990s Soran District has been flooded with Kurdish refugees returning from Iran, where they fled to between 1974 and 1989 to avoid the Second Iraqi–Kurdish War and the Al-Anfal Campaign. Due to this influx, The population grew from 27,000 in 1991, before the Kurdish uprising and establishment of Iraqi Kurdistan, to about 175,000 in the last fifteen years. Most of these returnees settled in and around Soran, unable to return to their original villages which had been destroyed by the Baathist regime’s army, or unwilling to return to locations still under threat of Turkish bombings and incursions due to the presence of PKK forces there.  The city's original name, Siddeeq was changed to Soran, Siddeeq being a camp which was constructed in the late 70s and settled with Kurdish inhabitants from the surrounding areas who had been forcefully displaced by Saddam Hussein's regime. After the uprising in 1991, Siddeeq, which is an Arabic name, was changed to the Kurdish name of Soran. However, the city of Diyana has kept its name.  Diana is located on the Hamilton Road connecting Arbil to Iran through Hajomaran (a sub-district of Choman district). "
+                    android:text="@string/HISTORY_TEXT"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
@@ -167,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Languages:"
+                    android:text="@string/LANGUAGES_TITLE_TEXT"
                     android:textColor="#ff000000"
                     android:textSize="18sp" />
 
@@ -176,7 +176,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
-                    android:text="Both Sorani and Bahdini are equally common and used in the region. Persian is widely spoken along with the two dialects of Kurdish because a large number of the inhabitants of the town are returnees from Iran, and a large number of them were even born and raised in Iran. Assyrians of Hawdiyaan village and Diyana speak Syriac their native language along with Kurdish and Arabic and have their own Syriac schools. "
+                    android:text="@string/LANGUAGES_TEXT"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 

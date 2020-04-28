@@ -29,7 +29,6 @@
             android:id="@+id/wtgThumbnail"
             android:layout_width="match_parent"
             android:layout_height="234dp"
-            android:contentDescription="@string/soran_palace_hotel_desc"
             android:cropToPadding="false"
             android:forceHasOverlappingRendering="true"
             android:scaleType="centerCrop"
