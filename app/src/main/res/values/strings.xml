@@ -44,7 +44,7 @@
 
     <string name="HISTORY_TITLE_TEXT">History </string>
     <string name="HISTORY_TEXT">
-    The city of Diana was originally a small village inhabited by Nochiya Assyrians of the Rawanduz Clan ruled by Kurdish Aghas of the Soran tribe,[4] and continued to be for many years up until an influx of Kurdish refugees turned it into a large city. Since the early 1990s Soran District has been flooded with Kurdish refugees returning from Iran, where they fled to between 1974 and 1989 to avoid the Second Iraqi–Kurdish War and the Al-Anfal Campaign. Due to this influx, The population grew from 27,000 in 1991, before the Kurdish uprising and establishment of Iraqi Kurdistan, to about 175,000 in the last fifteen years. Most of these returnees settled in and around Soran, unable to return to their original villages which had been destroyed by the Baathist regime’s army, or unwilling to return to locations still under threat of Turkish bombings and incursions due to the presence of PKK forces there.  The city's original name, Siddeeq was changed to Soran, Siddeeq being a camp which was constructed in the late 70s and settled with Kurdish inhabitants from the surrounding areas who had been forcefully displaced by Saddam Hussein's regime. After the uprising in 1991, Siddeeq, which is an Arabic name, was changed to the Kurdish name of Soran. However, the city of Diyana has kept its name.  Diana is located on the Hamilton Road connecting Arbil to Iran through Hajomaran (a sub-district of Choman district).
+    The city of Diana was originally a small village inhabited by Nochiya Assyrians of the Rawanduz Clan ruled by Kurdish Aghas of the Soran tribe,[4] and continued to be for many years up until an influx of Kurdish refugees turned it into a large city. Since the early 1990s Soran District has been flooded with Kurdish refugees returning from Iran, where they fled to between 1974 and 1989 to avoid the Second Iraqi–Kurdish War and the Al-Anfal Campaign. Due to this influx, The population grew from 27,000 in 1991, before the Kurdish uprising and establishment of Iraqi Kurdistan, to about 175,000 in the last fifteen years. Most of these returnees settled in and around Soran, unable to return to their original villages which had been destroyed by the Baathist regime\’s army, or unwilling to return to locations still under threat of Turkish bombings and incursions due to the presence of PKK forces there.  The city\'s original name, Siddeeq was changed to Soran, Siddeeq being a camp which was constructed in the late 70s and settled with Kurdish inhabitants from the surrounding areas who had been forcefully displaced by Saddam Hussein\'s regime. After the uprising in 1991, Siddeeq, which is an Arabic name, was changed to the Kurdish name of Soran. However, the city of Diyana has kept its name.  Diana is located on the Hamilton Road connecting Arbil to Iran through Hajomaran (a sub-district of Choman district).
     </string>
 
     <string name="LANGUAGES_TITLE_TEXT">Languages </string>
@@ -62,8 +62,10 @@
 
     <!--  fragment_XXX_show.xml  STARTED -->
     <string name="rating_label">Rating:</string>
-    <string name="no_of_raters_text">Reviews</string>
+    <string name="no_of_raters_text">%1$d Reviews</string>
     <!--  fragment_XXX_show.xml  END -->
 
+    <!-- RestaurantListAdapter.java -->
+    <string name="not_supplied_text">not provided</string>
 
 </resources>

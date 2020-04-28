@@ -49,12 +49,12 @@ public class RestaurantShow extends Fragment {
         restaurantShowViewModel = new RestaurantShowViewModel(getActivity().getApplication(), UID);
         restaurantShowViewModel.getRestaurant().observe(getViewLifecycleOwner(), res -> {
             resName.setText(res.getName());
-            phoneNo.setText(res.getPhoneNo() == null ? "Not Provided" : res.getPhoneNo());
-            webUrl.setText(res.getWebsite() == null ? "Not Provided" : res.getWebsite());
+            phoneNo.setText(res.getPhoneNo() == null ? getText(R.string.not_supplied_text) : res.getPhoneNo());
+            webUrl.setText(res.getWebsite() == null ? getText(R.string.not_supplied_text) : res.getWebsite());
             openTime.setText(res.getOpenFrom());
             closeTime.setText(res.getCloseAt());
             rating.setRating(res.getRating().floatValue());
-            noOfRaters.setText(res.getNoOfRaters() + " Reviews");
+            noOfRaters.setText(getString(R.string.no_of_raters_text, res.getNoOfRaters()));
             resLocation.setText(res.getLocation());
             locateOnMapBTN.setOnClickListener(view -> {
                 Uri loc = Uri.parse("https://plus.codes/" + Uri.encode(res.getPlusCode()));
