@@ -72,8 +72,21 @@ public class HotelListAdapter extends ListAdapter<Hotels, HotelListAdapter.Hotel
         data.putString("UID", current.getUniqueId());
 
         holder.itemView.setOnClickListener(view -> {
-            navController.navigate(R.id.action_nav_hotels_to_hotelShowFragment, data);
+            navigateTo(navController, data);
         });
+        holder.hotelName.setOnClickListener(view -> {
+            navigateTo(navController, data);
+        });
+        holder.phoneNo.setOnClickListener(view -> {
+            navigateTo(navController, data);
+        });
+        holder.ratingBar.setOnClickListener(view -> {
+            navigateTo(navController, data);
+        });
+    }
+
+    void navigateTo(NavController navController, Bundle data) {
+        navController.navigate(R.id.action_nav_hotels_to_hotelShowFragment, data);
     }
 
 

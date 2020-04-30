@@ -67,6 +67,7 @@
                 android:progress="0"
                 android:rating="4"
                 android:stepSize="0.1"
+                android:isIndicator="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/placeName" />
 
@@ -85,12 +86,14 @@
             <TextView
                 android:id="@+id/phone_no"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
                 android:text="Contacts"
                 android:textColor="#000000"
                 android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/phone_title_text" />
         </androidx.constraintlayout.widget.ConstraintLayout>

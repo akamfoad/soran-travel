@@ -65,15 +65,27 @@ public class RestaurantListAdapter extends ListAdapter<Restaurants, RestaurantLi
         holder.restaurantName.setText(current.getName());
         holder.ratingBar.setRating(current.getRating().floatValue());
         holder.phoneNo.setText(current.getPhoneNo() == null ? owner.getText(R.string.not_supplied_text) : current.getPhoneNo());
-
+        System.out.println(current.getPhoneNo());
         NavController navController = Navigation.findNavController(owner.getView());
         final Bundle data = new Bundle();
         data.putString("UID", current.getUniqueId());
 
         holder.itemView.setOnClickListener(view -> {
-            navController.navigate(R.id.action_nav_resturants_to_restaurantShow, data);
+            navigateTo(navController, data);
         });
+        holder.restaurantName.setOnClickListener(view -> {
+            navigateTo(navController, data);
+        });
+        holder.phoneNo.setOnClickListener(view -> {
+            navigateTo(navController, data);
+        });
+        holder.ratingBar.setOnClickListener(view -> {
+            navigateTo(navController, data);
+        });
+    }
 
+    void navigateTo(NavController navController, Bundle data) {
+        navController.navigate(R.id.action_nav_resturants_to_restaurantShow, data);
     }
 
     static class RestaurantViewHolder extends RecyclerView.ViewHolder {

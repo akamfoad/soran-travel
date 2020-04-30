@@ -84,9 +84,21 @@ public class WhereToGoListAdapter extends ListAdapter<WhereToGo, WhereToGoListAd
         data.putString("UID", current.getUniqueId());
 
         holder.itemView.setOnClickListener(view -> {
-            navController.navigate(R.id.action_nav_where_to_go_to_WTGShow, data);
+            navigateTo(navController, data);
         });
 
+        holder.wtgName.setOnClickListener(view -> {
+            navigateTo(navController, data);
+        });
+
+        holder.wtgDesc.setOnClickListener(view -> {
+            navigateTo(navController, data);
+        });
+
+    }
+
+    void navigateTo(NavController navController, Bundle data) {
+        navController.navigate(R.id.action_nav_where_to_go_to_WTGShow, data);
     }
 
     class WhereToGoViewHolder extends RecyclerView.ViewHolder {

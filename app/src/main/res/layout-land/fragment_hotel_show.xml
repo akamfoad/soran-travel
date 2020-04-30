@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/res_show_root"
+    android:id="@+id/hotel_show_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.resShow.RestaurantShow">
+    tools:context=".ui.hotelShow.HotelShowFragment">
 
     <ScrollView
         android:layout_width="0dp"
@@ -18,16 +18,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_default="percent">
 
             <com.synnapps.carouselview.CarouselView
-                android:id="@+id/res_show_carousel"
-                android:layout_width="0dp"
+                android:id="@+id/hotel_show_carousel"
+                android:layout_width="300dp"
                 android:layout_height="300dp"
                 app:fillColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5"
                 app:pageColor="#00000000"
                 app:radius="6dp"
                 app:slideInterval="5000"
@@ -39,26 +40,27 @@
             </com.synnapps.carouselview.CarouselView>
 
             <TextView
-                android:id="@+id/resName"
+                android:id="@+id/hotelName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="placeholder"
                 android:textSize="36sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/res_show_carousel"
+                app:layout_constraintStart_toEndOf="@+id/hotel_show_carousel"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:layout_conversion_absoluteHeight="49dp"
                 tools:layout_conversion_absoluteWidth="188dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/phone_no_container"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/resName">
+                app:layout_constraintStart_toEndOf="@+id/hotel_show_carousel"
+                app:layout_constraintTop_toBottomOf="@+id/hotelName">
 
                 <ImageView
                     android:id="@+id/phone_icon"
@@ -68,14 +70,15 @@
                     android:contentDescription="Phone Icon"
                     android:src="@drawable/ic_local_phone_black_24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/phone_no"
+                    android:id="@+id/hotel_phone_no"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
-                    android:text="07504732340"
+                    android:text="0750000000"
                     app:layout_constraintBottom_toBottomOf="@+id/phone_icon"
                     app:layout_constraintStart_toEndOf="@+id/phone_icon"
                     app:layout_constraintTop_toTopOf="@+id/phone_icon" />
@@ -84,11 +87,12 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/web_url_container"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hotel_show_carousel"
                 app:layout_constraintTop_toBottomOf="@+id/phone_no_container">
 
                 <ImageView
@@ -99,11 +103,12 @@
                     android:contentDescription="Web Icon"
                     android:src="@drawable/ic_web_black_24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/web_url"
-                    android:layout_width="0dp"
+                    android:id="@+id/hotel_web_url"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:autoLink="web"
@@ -117,90 +122,73 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/open_close_time_container"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hotel_show_carousel"
                 app:layout_constraintTop_toBottomOf="@+id/web_url_container">
 
                 <TextView
-                    android:id="@+id/open_time"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/prices"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
-                    android:text="12 AM"
-                    app:layout_constraintStart_toEndOf="@+id/open_icon"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/close_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
-                    android:text="12 PM"
-                    app:layout_constraintStart_toEndOf="@+id/close_icon"
+                    android:text="12$"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dollar_icon"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/open_icon"
+                    android:id="@+id/dollar_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:contentDescription="Open Door Icon"
-                    android:src="@drawable/ic_door_open"
+                    android:contentDescription="dollar sign"
+                    android:src="@drawable/ic_attach_money_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/close_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:contentDescription="Close door icon"
-                    android:src="@drawable/ic_door_closed"
-                    app:layout_constraintStart_toEndOf="@+id/open_time"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/open_close_time_container"
                 app:layout_constraintTop_toBottomOf="@id/open_close_time_container">
 
                 <TextView
                     android:id="@+id/rating_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="16dp"
                     android:text="@string/rating_label"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <RatingBar
-                    android:id="@+id/rating"
+                    android:id="@+id/hotel_rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:isIndicator="true"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rating_label" />
 
                 <TextView
-                    android:id="@+id/no_of_raters"
+                    android:id="@+id/hotel_no_of_raters"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/no_of_raters_text"
-                    app:layout_constraintBottom_toBottomOf="@+id/rating"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/rating"
-                    app:layout_constraintTop_toTopOf="@+id/rating" />
+                    app:layout_constraintStart_toEndOf="@+id/hotel_rating"
+                    app:layout_constraintTop_toTopOf="@+id/hotel_rating" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -218,7 +206,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/resLocation"
+        android:id="@+id/hotelLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -228,7 +216,7 @@
         app:layout_constraintTop_toBottomOf="@+id/belt" />
 
     <ImageButton
-        android:id="@+id/locateOnMapBTN"
+        android:id="@+id/hotel_locateOnMapBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"

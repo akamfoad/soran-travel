@@ -10,7 +10,7 @@
         android:id="@+id/linear_layout_restaurant"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="15dp"
+        android:layout_marginHorizontal="5dp"
         android:background="#00FFFFFF"
         android:clipToPadding="true"
         android:orientation="vertical"

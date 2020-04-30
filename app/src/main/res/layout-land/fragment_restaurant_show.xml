@@ -18,16 +18,18 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_default="percent">
 
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/res_show_carousel"
-                android:layout_width="0dp"
+                android:layout_width="300dp"
                 android:layout_height="300dp"
                 app:fillColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.5"
                 app:pageColor="#00000000"
                 app:radius="6dp"
                 app:slideInterval="5000"
@@ -42,22 +44,24 @@
                 android:id="@+id/resName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
                 android:text="placeholder"
                 android:textSize="36sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/res_show_carousel"
+                app:layout_constraintStart_toEndOf="@+id/res_show_carousel"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:layout_conversion_absoluteHeight="49dp"
                 tools:layout_conversion_absoluteWidth="188dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/phone_no_container"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/res_show_carousel"
                 app:layout_constraintTop_toBottomOf="@+id/resName">
 
                 <ImageView
@@ -84,11 +88,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/web_url_container"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/res_show_carousel"
                 app:layout_constraintTop_toBottomOf="@+id/phone_no_container">
 
                 <ImageView
@@ -117,12 +121,12 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/open_close_time_container"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/res_show_carousel"
                 app:layout_constraintTop_toBottomOf="@+id/web_url_container">
 
                 <TextView
@@ -166,18 +170,18 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/res_show_carousel"
                 app:layout_constraintTop_toBottomOf="@id/open_close_time_container">
 
                 <TextView
                     android:id="@+id/rating_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="16dp"
                     android:text="@string/rating_label"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -186,7 +190,7 @@
                     android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:isIndicator="true"
                     app:layout_constraintStart_toStartOf="parent"

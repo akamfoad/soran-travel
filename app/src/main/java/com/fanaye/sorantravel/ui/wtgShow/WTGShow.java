@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.fanaye.sorantravel.R;
@@ -54,6 +55,7 @@ public class WTGShow extends Fragment {
                                     .split("-")[0]
                     )
                     .observe(getViewLifecycleOwner(), textInfo -> {
+                        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(textInfo.getName());
                         wtgName.setText(textInfo.getName());
                         wtgDesc.setText(textInfo.getInfo());
                     });

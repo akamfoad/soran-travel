@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.fanaye.sorantravel.R;
@@ -26,7 +27,7 @@ import java.util.stream.Collectors;
 public class HotelShowFragment extends Fragment {
 
     private HotelShowViewModel hotelsShowViewModel;
-
+    private String actionBarTitle;
     public static HotelShowFragment newInstance() {
         return new HotelShowFragment();
     }
@@ -50,6 +51,7 @@ public class HotelShowFragment extends Fragment {
 
         hotelsShowViewModel = new HotelShowViewModel(getActivity().getApplication(), UID);
         hotelsShowViewModel.getHotels().observe(getViewLifecycleOwner(), hotel -> {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(hotel.getName());
             hotelName.setText(hotel.getName());
             phoneNo.setText(hotel.getPhoneNo() == null ? getString(R.string.not_supplied_text) : hotel.getPhoneNo());
             webUrl.setText(hotel.getWebsite() == null ? getString(R.string.not_supplied_text) : hotel.getWebsite());

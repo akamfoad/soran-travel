@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.fanaye.sorantravel.R;
@@ -48,6 +49,7 @@ public class RestaurantShow extends Fragment {
 
         restaurantShowViewModel = new RestaurantShowViewModel(getActivity().getApplication(), UID);
         restaurantShowViewModel.getRestaurant().observe(getViewLifecycleOwner(), res -> {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(res.getName());
             resName.setText(res.getName());
             phoneNo.setText(res.getPhoneNo() == null ? getText(R.string.not_supplied_text) : res.getPhoneNo());
             webUrl.setText(res.getWebsite() == null ? getText(R.string.not_supplied_text) : res.getWebsite());
