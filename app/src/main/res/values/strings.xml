@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Soran Travel</string>
+    <string name="app_name" translatable="false">Soran Travel</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Soran Travel</string>
+    <string name="nav_header_title" translatable="false">Soran Travel</string>
     <string name="nav_header_subtitle">explore Soran city</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <!--  Hotel view resources - start  -->
@@ -33,14 +33,10 @@
 
     <!--  about PARAGRAPH  -->
     <string name="GENERAL_INFO_TITLE_TEXT">General Info</string>
-    <string name="GENERAL_INFO_TEXT">
-        Soran (Kurdish: سۆران ,Soran‎) or Diana is a city in Erbil Governorate, and the capital of Soran District. Diana is one of the largest cities in Kurdistan Region, and is expected to increase within the next ten years by a further 50,000 people.
-    </string>
+    <string name="GENERAL_INFO_TEXT">Soran (Kurdish: سۆران ,Soran‎) or Diana is a city in Erbil Governorate, and the capital of Soran District. Diana is one of the largest cities in Kurdistan Region, and is expected to increase within the next ten years by a further 50,000 people.</string>
 
     <string name="ETYMOLOGY_TITLE_TEXT">Etymology </string>
-    <string name="ETYMOLOGY_TEXT">
-    The name Diana is derived from the Kurdish word for "Christian", since it was originally an Assyrian Christian village prior to expanding in the last 20 years. The Name Soran is derived from the Kurdish Soran tribe who have settled in this area along with the Assyrians.
-    </string>
+    <string name="ETYMOLOGY_TEXT">The name Diana is derived from the Kurdish word for Christian, since it was originally an Assyrian Christian village prior to expanding in the last 20 years. The Name Soran is derived from the Kurdish Soran tribe who have settled in this area along with the Assyrians.</string>
 
     <string name="HISTORY_TITLE_TEXT">History </string>
     <string name="HISTORY_TEXT">
@@ -52,7 +48,7 @@
     Both Sorani and Bahdini are equally common and used in the region. Persian is widely spoken along with the two dialects of Kurdish because a large number of the inhabitants of the town are returnees from Iran, and a large number of them were even born and raised in Iran. Assyrians of Hawdiyaan village and Diyana speak Syriac their native language along with Kurdish and Arabic and have their own Syriac schools.
     </string>
 
-    <string name="WIKIPEDIA_REFERENCE_TEXT">Read On <a href="https://en.wikipedia.org/wiki/Soran,_Iraq">Wikipedia.com</a></string>
+    <string name="WIKIPEDIA_REFERENCE_TEXT">Read more on <a href="https://en.wikipedia.org/wiki/Soran,_Iraq">Wikipedia.com</a></string>
 
     <!--    home UI strings - END -->
 
@@ -67,5 +63,6 @@
 
     <!-- RestaurantListAdapter.java -->
     <string name="not_supplied_text">not provided</string>
+    <string name="communicate">Communicate</string>
 
 </resources>

@@ -55,7 +55,6 @@
                 android:id="@+id/phone_no_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,10 +64,10 @@
                     android:id="@+id/phone_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:contentDescription="Phone Icon"
                     android:src="@drawable/ic_local_phone_black_24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/phone_no"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
@@ -76,7 +75,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
-                    android:text="0750000000"
+                    android:text="07504732340"
+                    app:layout_constraintBottom_toBottomOf="@+id/phone_icon"
                     app:layout_constraintStart_toEndOf="@+id/phone_icon"
                     app:layout_constraintTop_toTopOf="@+id/phone_icon" />
 
@@ -109,6 +109,7 @@
                     android:autoLink="web"
                     android:linksClickable="true"
                     android:text="https://example.com"
+                    app:layout_constraintBottom_toBottomOf="@+id/web_icon"
                     app:layout_constraintStart_toEndOf="@+id/web_icon"
                     app:layout_constraintTop_toTopOf="@+id/web_icon" />
 

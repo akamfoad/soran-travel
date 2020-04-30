@@ -23,8 +23,6 @@ import com.synnapps.carouselview.CarouselView;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//public class HotelShowFragment extends Fragment {
-
 public class HotelShowFragment extends Fragment {
 
     private HotelShowViewModel hotelsShowViewModel;
@@ -53,11 +51,11 @@ public class HotelShowFragment extends Fragment {
         hotelsShowViewModel = new HotelShowViewModel(getActivity().getApplication(), UID);
         hotelsShowViewModel.getHotels().observe(getViewLifecycleOwner(), hotel -> {
             hotelName.setText(hotel.getName());
-            phoneNo.setText(hotel.getPhoneNo() == null ? "Not Provided" : hotel.getPhoneNo());
-            webUrl.setText(hotel.getWebsite() == null ? "Not Provided" : hotel.getWebsite());
+            phoneNo.setText(hotel.getPhoneNo() == null ? getString(R.string.not_supplied_text) : hotel.getPhoneNo());
+            webUrl.setText(hotel.getWebsite() == null ? getString(R.string.not_supplied_text) : hotel.getWebsite());
             prices.setText(hotel.getPrices());
             rating.setRating(hotel.getRating().floatValue());
-            noOfRaters.setText(hotel.getNoOfRaters() + " Reviews");
+            noOfRaters.setText(getString(R.string.no_of_raters_text, hotel.getNoOfRaters()));
             hotelLocation.setText(hotel.getLocation());
             locateOnMapBTN.setOnClickListener(view -> {
                 Uri loc = Uri.parse("https://plus.codes/" + Uri.encode(hotel.getPlusCode()));

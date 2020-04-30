@@ -55,7 +55,6 @@
                 android:id="@+id/phone_no_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,11 +64,12 @@
                     android:id="@+id/phone_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
                     android:contentDescription="Phone Icon"
                     android:src="@drawable/ic_local_phone_black_24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/phone_no"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/hotel_phone_no"
@@ -77,8 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:text="0750000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/phone_icon"
                     app:layout_constraintStart_toEndOf="@+id/phone_icon"
                     app:layout_constraintTop_toTopOf="@+id/phone_icon" />
 
@@ -89,6 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/phone_no_container">
@@ -101,19 +101,18 @@
                     android:contentDescription="Web Icon"
                     android:src="@drawable/ic_web_black_24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/hotel_web_url"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
-                    android:layout_marginEnd="18dp"
                     android:autoLink="web"
                     android:linksClickable="true"
                     android:text="https://example.com"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/web_icon"
                     app:layout_constraintStart_toEndOf="@+id/web_icon"
                     app:layout_constraintTop_toTopOf="@+id/web_icon" />
 
@@ -136,7 +135,6 @@
                     android:layout_marginStart="18dp"
                     android:text="12$"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/dollar_icon"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -147,6 +145,7 @@
                     android:layout_marginStart="16dp"
                     android:contentDescription="dollar sign"
                     android:src="@drawable/ic_attach_money_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
