@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData;
 
 import com.fanaye.sorantravel.db.Images.Images;
 import com.fanaye.sorantravel.db.Repository;
+import com.fanaye.sorantravel.db.TextInfo.TextInfo;
 import com.fanaye.sorantravel.db.WhereToGo.WhereToGo;
 
 import java.util.List;
@@ -29,5 +30,9 @@ public class WTGShowViewModel extends AndroidViewModel {
 
     public LiveData<List<Images>> getImages() {
         return images;
+    }
+
+    public LiveData<TextInfo> getTextInfoOf(String UID, String locale) {
+        return repository.getTextInfoOf(UID, locale);
     }
 }

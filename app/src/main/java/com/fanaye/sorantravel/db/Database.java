@@ -11,6 +11,8 @@ import com.fanaye.sorantravel.db.Hotels.Hotels;
 import com.fanaye.sorantravel.db.Hotels.HotelsDao;
 import com.fanaye.sorantravel.db.Images.Images;
 import com.fanaye.sorantravel.db.Images.ImagesDao;
+import com.fanaye.sorantravel.db.TextInfo.TextInfo;
+import com.fanaye.sorantravel.db.TextInfo.TextInfoDao;
 import com.fanaye.sorantravel.db.WhereToGo.WhereToGo;
 import com.fanaye.sorantravel.db.WhereToGo.WhereToGoDao;
 import com.fanaye.sorantravel.db.restaurants.Restaurants;
@@ -19,7 +21,7 @@ import com.fanaye.sorantravel.db.restaurants.RestaurantsDao;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@androidx.room.Database(entities = {WhereToGo.class, Images.class, Hotels.class, Restaurants.class}, version = 1, exportSchema = false)
+@androidx.room.Database(entities = {WhereToGo.class, TextInfo.class, Images.class, Hotels.class, Restaurants.class}, version = 1, exportSchema = false)
 public abstract class Database extends RoomDatabase {
     private static final int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
@@ -49,6 +51,8 @@ public abstract class Database extends RoomDatabase {
     }
 
     public abstract WhereToGoDao whereToGoDao();
+
+    public abstract TextInfoDao textInfoDao();
 
     public abstract ImagesDao imagesDao();
 

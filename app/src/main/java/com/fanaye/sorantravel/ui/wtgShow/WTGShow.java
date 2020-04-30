@@ -43,8 +43,20 @@ public class WTGShow extends Fragment {
 
         wtgShowViewModel = new WTGShowViewModel(getActivity().getApplication(), UID);
         wtgShowViewModel.getWhereToGo().observe(getViewLifecycleOwner(), wtg -> {
-            wtgName.setText(wtg.getName());
-            wtgDesc.setText(wtg.getTextInfo());
+            wtgShowViewModel
+                    .getTextInfoOf(
+                            wtg.getUniqueId(),
+                            getResources()
+                                    .getConfiguration()
+                                    .getLocales()
+                                    .toLanguageTags()
+                                    .split(",")[0]
+                                    .split("-")[0]
+                    )
+                    .observe(getViewLifecycleOwner(), textInfo -> {
+                        wtgName.setText(textInfo.getName());
+                        wtgDesc.setText(textInfo.getInfo());
+                    });
             wtgLocation.setText(wtg.getLocation());
             locateOnMapBTN.setOnClickListener(view -> {
                 Uri loc = Uri.parse("https://plus.codes/" + Uri.encode(wtg.getPlusCode()));

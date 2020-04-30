@@ -64,8 +64,20 @@ public class WhereToGoListAdapter extends ListAdapter<WhereToGo, WhereToGoListAd
                 holder.wtgThumbnail.setImageBitmap(BitmapFactory.decodeByteArray(images.getPicture(), 0, images.getPicture().length));
             }
         });
-        holder.wtgName.setText(current.getName());
-        holder.wtgDesc.setText(current.getTextInfo());
+        whereToGoViewModel
+                .getTextInfoOf(
+                        current.getUniqueId(),
+                        owner.getResources()
+                                .getConfiguration()
+                                .getLocales()
+                                .toLanguageTags()
+                                .split(",")[0]
+                                .split("-")[0]
+                )
+                .observe(owner.getViewLifecycleOwner(), textInfo -> {
+                    holder.wtgName.setText(textInfo.getName());
+                    holder.wtgDesc.setText(textInfo.getInfo());
+                });
 
         NavController navController = Navigation.findNavController(owner.getView());
         final Bundle data = new Bundle();

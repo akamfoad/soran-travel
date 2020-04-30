@@ -8,6 +8,8 @@ import com.fanaye.sorantravel.db.Hotels.Hotels;
 import com.fanaye.sorantravel.db.Hotels.HotelsDao;
 import com.fanaye.sorantravel.db.Images.Images;
 import com.fanaye.sorantravel.db.Images.ImagesDao;
+import com.fanaye.sorantravel.db.TextInfo.TextInfo;
+import com.fanaye.sorantravel.db.TextInfo.TextInfoDao;
 import com.fanaye.sorantravel.db.WhereToGo.WhereToGo;
 import com.fanaye.sorantravel.db.WhereToGo.WhereToGoDao;
 import com.fanaye.sorantravel.db.restaurants.Restaurants;
@@ -16,6 +18,7 @@ import com.fanaye.sorantravel.db.restaurants.RestaurantsDao;
 import java.util.List;
 
 public class Repository {
+    private TextInfoDao textInfoDao;
     private WhereToGoDao whereToGoDao;
     private LiveData<List<WhereToGo>> whereToGoList;
 
@@ -30,6 +33,7 @@ public class Repository {
 
     public Repository(Application application) {
         Database db = Database.getDatabase(application);
+        textInfoDao = db.textInfoDao();
         whereToGoDao = db.whereToGoDao();
         whereToGoList = whereToGoDao.getWhereToGo_s();
         imagesDao = db.imagesDao();
@@ -78,6 +82,10 @@ public class Repository {
 
     public LiveData<Restaurants> getRestaurant(String id) {
         return restaurantsDao.getRestaurant(id);
+    }
+
+    public LiveData<TextInfo> getTextInfoOf(String UID, String locale) {
+        return textInfoDao.getTextInfoOf(UID, locale);
     }
 
 }

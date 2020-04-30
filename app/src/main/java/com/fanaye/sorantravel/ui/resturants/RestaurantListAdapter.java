@@ -64,7 +64,7 @@ public class RestaurantListAdapter extends ListAdapter<Restaurants, RestaurantLi
 
         holder.restaurantName.setText(current.getName());
         holder.ratingBar.setRating(current.getRating().floatValue());
-        holder.phoneNo.setText(current.getPhoneNo().equals("") ? owner.getText(R.string.not_supplied_text) : current.getPhoneNo());
+        holder.phoneNo.setText(current.getPhoneNo() == null ? owner.getText(R.string.not_supplied_text) : current.getPhoneNo());
 
         NavController navController = Navigation.findNavController(owner.getView());
         final Bundle data = new Bundle();
