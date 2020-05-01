@@ -38,7 +38,7 @@
                 android:id="@+id/shortcuts_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#7CCEFE"
+                android:background="@color/barColor"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="5dp"
@@ -52,7 +52,10 @@
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:drawableTop="@drawable/hotel_btn_icon"
-                    android:text="@string/FG_home_HOTELS_BTN" />
+                    android:fontFamily="serif"
+                    android:text="@string/FG_home_HOTELS_BTN"
+                    android:textSize="17sp" />
+
 
                 <Button
                     android:id="@+id/ResturantBtn"
@@ -62,7 +65,9 @@
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:drawableTop="@drawable/hamburger_btn_icon"
-                    android:text="@string/FG_home_RESTAURANTS_BTN" />
+                    android:fontFamily="serif"
+                    android:text="@string/FG_home_RESTAURANTS_BTN"
+                    android:textSize="17sp" />
 
                 <Button
                     android:id="@+id/WhereToGoBtn"
@@ -72,7 +77,9 @@
                     android:layout_weight="1"
                     android:background="#00FFFFFF"
                     android:drawableTop="@drawable/where_to_go_btn_icon"
-                    android:text="@string/FG_home_WTG_BTN" />
+                    android:fontFamily="serif"
+                    android:text="@string/FG_home_WTG_BTN"
+                    android:textSize="17sp" />
 
             </LinearLayout>
 
@@ -81,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="26dp"
 
                 android:background="@drawable/about_text_caption_bg_radius"
                 android:fontFamily="sans-serif"
@@ -110,16 +117,22 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="serif"
                     android:text="@string/GENERAL_INFO_TITLE_TEXT"
-                    android:textColor="#ff000000"
-                    android:textSize="18sp" />
+                    android:textColor="@color/titleText"
+                    android:textSize="24sp" />
+
 
                 <TextView
                     android:id="@+id/GENERAL_INFO_TEXT"
+                    style="@style/Widget.MaterialComponents.TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
+                    android:fontFamily="serif"
                     android:text="@string/GENERAL_INFO_TEXT"
+                    android:textColor="@color/detailText"
+                    android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
@@ -129,16 +142,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="serif"
                     android:text="@string/ETYMOLOGY_TITLE_TEXT"
-                    android:textColor="#ff000000"
-                    android:textSize="18sp" />
+                    android:textColor="@color/titleText"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/ETYMOLOGY_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
+                    android:fontFamily="serif"
                     android:text="@string/ETYMOLOGY_TEXT"
+                    android:textColor="@color/detailText"
+                    android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
@@ -148,16 +165,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="serif"
                     android:text="@string/HISTORY_TITLE_TEXT"
-                    android:textColor="#ff000000"
-                    android:textSize="18sp" />
+                    android:textColor="@color/titleText"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/HISTORY_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
+                    android:fontFamily="serif"
                     android:text="@string/HISTORY_TEXT"
+                    android:textColor="@color/detailText"
+                    android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
@@ -167,16 +188,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
+                    android:fontFamily="serif"
                     android:text="@string/LANGUAGES_TITLE_TEXT"
-                    android:textColor="#ff000000"
-                    android:textSize="18sp" />
+                    android:textColor="@color/titleText"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/LANGUAGES_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
+                    android:fontFamily="serif"
                     android:text="@string/LANGUAGES_TEXT"
+                    android:textColor="@color/detailText"
+                    android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
@@ -187,8 +212,12 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="10dp"
                     android:autoLink="web"
+                    android:fontFamily="serif"
                     android:linksClickable="true"
                     android:text="@string/WIKIPEDIA_REFERENCE_TEXT"
+                    android:textColor="@color/detailText"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
             </LinearLayout>

@@ -24,6 +24,9 @@ public class WhereToGoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_where_to_go_s, container, false);
+        if(getResources().getConfiguration().getLocales().get(0).getLanguage().equalsIgnoreCase("ku")){
+            root.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
         recyclerView = root.findViewById(R.id.linear_layout_where_to_go);
         whereToGoViewModel = new WhereToGoViewModel(getActivity().getApplication());
         whereToGoListAdapter = new WhereToGoListAdapter(this, getContext(), whereToGoViewModel);

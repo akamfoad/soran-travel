@@ -65,4 +65,12 @@
     <string name="not_supplied_text">not provided</string>
     <string name="communicate">Communicate</string>
 
+<!--  setting fragment  -->
+    <string name="language_label">Langauge:</string>
+    <!--  Languages array  -->
+    <string-array name="languages">
+        <item>English</item>
+        <item>کوردی</item>
+        <item>العربیة</item>
+    </string-array>
 </resources>

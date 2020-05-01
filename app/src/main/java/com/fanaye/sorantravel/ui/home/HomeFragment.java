@@ -24,6 +24,9 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+        if(getResources().getConfiguration().getLocales().get(0).getLanguage().equalsIgnoreCase("ku")){
+            root.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
         CarouselView carouselview;
         ImageListener imagelistener = new ImageListener() {
             @Override

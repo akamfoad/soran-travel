@@ -21,6 +21,9 @@ public class HotelsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_hotels, container, false);
+        if (getResources().getConfiguration().getLocales().get(0).getLanguage().equalsIgnoreCase("ku")) {
+            root.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
         recyclerView = root.findViewById(R.id.linear_layout_hotel);
         hotelsViewModel = new HotelsViewModel(getActivity().getApplication());
         hotelListAdapter = new HotelListAdapter(this, getContext(), hotelsViewModel);

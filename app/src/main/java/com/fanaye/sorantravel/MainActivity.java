@@ -1,8 +1,13 @@
 package com.fanaye.sorantravel;
 
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -13,6 +18,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -20,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        String lang = preferences.getString("lang", Resources.getSystem().getConfiguration().getLocales().get(0).getLanguage());
+        System.out.println("lang = " + lang);
+        Locale newLocal = new Locale(lang);
+        Configuration configuration = new Configuration();
+        configuration.setLocale(newLocal);
+        getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        if (item.getItemId() == R.id.action_settings) {
+            navController.navigate(R.id.nav_setting);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

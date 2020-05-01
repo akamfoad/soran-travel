@@ -36,6 +36,9 @@ public class WTGShow extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         final String UID = getArguments().getString("UID");
         View root = inflater.inflate(R.layout.wtg_show_fragment, container, false);
+        if (getResources().getConfiguration().getLocales().get(0).getLanguage().equalsIgnoreCase("ku")) {
+            root.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
         TextView wtgName = root.findViewById(R.id.wtgName);
         TextView wtgDesc = root.findViewById(R.id.wtgDesc);
         wtgDesc.setBreakStrategy(Layout.BREAK_STRATEGY_HIGH_QUALITY);

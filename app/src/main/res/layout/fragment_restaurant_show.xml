@@ -43,6 +43,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:fontFamily="serif"
                 android:text="placeholder"
                 android:textSize="36sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +76,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
+                    android:fontFamily="serif"
                     android:text="07504732340"
+                    android:textDirection="ltr"
                     app:layout_constraintBottom_toBottomOf="@+id/phone_icon"
                     app:layout_constraintStart_toEndOf="@+id/phone_icon"
                     app:layout_constraintTop_toTopOf="@+id/phone_icon" />
@@ -107,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:autoLink="web"
+                    android:fontFamily="serif"
                     android:linksClickable="true"
                     android:text="https://example.com"
                     app:layout_constraintBottom_toBottomOf="@+id/web_icon"
@@ -130,6 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
+                    android:fontFamily="serif"
                     android:text="12 AM"
                     app:layout_constraintStart_toEndOf="@+id/open_icon"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -139,6 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
+                    android:fontFamily="serif"
                     android:text="12 PM"
                     app:layout_constraintStart_toEndOf="@+id/close_icon"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -178,6 +184,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
+                    android:fontFamily="serif"
                     android:text="@string/rating_label"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -196,6 +203,7 @@
                     android:id="@+id/no_of_raters"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="serif"
                     android:text="@string/no_of_raters_text"
                     app:layout_constraintBottom_toBottomOf="@+id/rating"
                     app:layout_constraintEnd_toEndOf="parent"

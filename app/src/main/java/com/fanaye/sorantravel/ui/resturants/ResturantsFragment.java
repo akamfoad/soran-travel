@@ -23,6 +23,9 @@ public class ResturantsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_restaurants, container, false);
+        if(getResources().getConfiguration().getLocales().get(0).getLanguage().equalsIgnoreCase("ku")){
+            root.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
         recyclerView = root.findViewById(R.id.linear_layout_restaurant);
         restaurantViewModel = new RestaurantViewModel(getActivity().getApplication());
         restaurantListAdapter = new RestaurantListAdapter(this, getContext(), restaurantViewModel);
