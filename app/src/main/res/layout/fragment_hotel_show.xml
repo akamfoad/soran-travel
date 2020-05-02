@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="placeholder"
-                android:fontFamily="serif"
+                android:fontFamily="@font/roboto"
                 android:textSize="36sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +68,7 @@
                     android:layout_marginStart="16dp"
                     android:contentDescription="Phone Icon"
                     android:src="@drawable/ic_local_phone_black_24dp"
-                    android:fontFamily="serif"
+                    android:fontFamily="@font/roboto"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:text="0750000000"
-                    android:fontFamily="serif"
+                    android:fontFamily="@font/roboto"
                     android:textDirection="ltr"
                     app:layout_constraintBottom_toBottomOf="@+id/phone_icon"
                     app:layout_constraintStart_toEndOf="@+id/phone_icon"
@@ -113,9 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
-                    android:fontFamily="serif"
-                    android:autoLink="web"
-                    android:linksClickable="true"
+                    android:fontFamily="@font/roboto"
                     android:text="https://example.com"
                     app:layout_constraintBottom_toBottomOf="@+id/web_icon"
                     app:layout_constraintStart_toEndOf="@+id/web_icon"
@@ -140,7 +138,7 @@
                     android:layout_marginStart="18dp"
                     android:text="12$"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:fontFamily="serif"
+                    android:fontFamily="@font/roboto"
                     app:layout_constraintStart_toEndOf="@+id/dollar_icon"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -171,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:text="@string/rating_label"
-                    android:fontFamily="serif"
+                    android:fontFamily="@font/roboto"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -190,7 +188,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/no_of_raters_text"
-                    android:fontFamily="serif"
+                    android:fontFamily="@font/roboto"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/hotel_rating"
@@ -217,7 +215,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="location"
-        android:fontFamily="serif"
+        android:fontFamily="@font/roboto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/belt" />

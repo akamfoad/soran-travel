@@ -23,7 +23,7 @@
     <string name="not_supplied_text">نەزانراوە</string>
     <string name="no_of_raters_text">%1$d پێداچوونەوە</string>
     <string name="phone_title_text">"ژمارە تەلەفۆن: "</string>
-    <string name="WIKIPEDIA_REFERENCE_TEXT">زیاتر بخوێنەوە لە <a href="https://ckb.wikipedia.org/wiki/%D8%B3%DB%86%D8%B1%D8%A7%D9%86">Wikipedia.com</a></string>
+    <string name="WIKIPEDIA_REFERENCE_TEXT">زیاتر بخوێنەوە لە <a href="https://ckb.wikipedia.org/wiki/%D8%B3%DB%86%D8%B1%D8%A7%D9%86">wikipedia.org</a></string>
     <string name="GENERAL_INFO_TEXT">سۆران  یان دیانە شارێکە لە پارێزگای هەولێر، وە پایتەختی قەزای سۆرانیشە. دیانە یەکێکە لە گەورەترین شارەکانی هەرێمی کوردستان،وە پێشبینی دەکرێت دانیشتوانەکەی زیادبکەن بە 50،000 کەس لە دە ساڵی داهاتوودا.</string>
     <string name="ETYMOLOGY_TITLE_TEXT">ڕیشەناسی</string>
     <string name="ETYMOLOGY_TEXT">ناوی دیانە لە ووشەیەکی کوردی هاتووە کە بەکارهاتووە بۆ ناساندنی مەسیحییەکان، چونکە ئەو شوێنە خۆی گوندێکی سریانییە مەسیحییەکان بووە پێش ئەوەی وا فراوان ببێت پێش 20 ساڵ. ناوی سۆران لە میرنشینی سۆرانی کوردییەوە هاتووە کە نیشتەجێ بوون لەم جێگایە هاوکات لەگەڵ سریانییەکان.</string>
@@ -34,4 +34,5 @@
     <string name="rating_label">هەڵسەنگاندن:</string>
     <string name="communicate">پەیوەندیبک</string>
     <string name="language_label">زمان:</string>
+    <string name="share_detail_text">ئەم نەرمەکاڵایە دەرەنجامی ئەرکێکە لە وانەی گەشەپێدانی نەرمەکاڵای مۆبایل بۆ دروستکردنی نەرمەکاڵایەکی گەشتیاری بۆ یەکێک لە شارەکانی کوردستان. بڕیارماندا بەشێوەیەکی هەرەوەزیانەی چوارکەسی دیزاین و گەشەپێدانی بۆ بکەین. خۆشحاڵ ئەبین بە پێداچوونەوەت یان باشترکردنی.</string>
 </resources>

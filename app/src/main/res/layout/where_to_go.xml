@@ -46,7 +46,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="PLACE"
-                android:fontFamily="serif"
+                android:fontFamily="@font/roboto"
                 android:textColor="@color/titleText"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -62,7 +62,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:text='A random sequence of events, symbols or steps often has no order and does not follow an intelligible pattern or combination. Individual random events are by definition unpredictable, but since they often follow a probability distribution, the frequency of different outcomes over numerous events (or "trials") is predictable.'
-                android:fontFamily="serif"
+                android:fontFamily="@font/roboto"
                 android:textColor="@color/detailText"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"

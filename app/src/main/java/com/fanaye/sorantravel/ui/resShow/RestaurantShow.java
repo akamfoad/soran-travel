@@ -5,6 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +42,8 @@ public class RestaurantShow extends Fragment {
         resName.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         TextView phoneNo = root.findViewById(R.id.phone_no);
         TextView webUrl = root.findViewById(R.id.web_url);
+        webUrl.setMovementMethod(LinkMovementMethod.getInstance());
+        webUrl.setAutoLinkMask(Linkify.WEB_URLS);
         TextView openTime = root.findViewById(R.id.open_time);
         TextView closeTime = root.findViewById(R.id.close_time);
         RatingBar rating = root.findViewById(R.id.rating);

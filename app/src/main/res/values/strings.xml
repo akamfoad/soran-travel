@@ -48,7 +48,7 @@
     Both Sorani and Bahdini are equally common and used in the region. Persian is widely spoken along with the two dialects of Kurdish because a large number of the inhabitants of the town are returnees from Iran, and a large number of them were even born and raised in Iran. Assyrians of Hawdiyaan village and Diyana speak Syriac their native language along with Kurdish and Arabic and have their own Syriac schools.
     </string>
 
-    <string name="WIKIPEDIA_REFERENCE_TEXT">Read more on <a href="https://en.wikipedia.org/wiki/Soran,_Iraq">Wikipedia.com</a></string>
+    <string name="WIKIPEDIA_REFERENCE_TEXT">Read more on <a href="https://en.wikipedia.org/wiki/Soran,_Iraq">wikipedia.org</a></string>
 
     <!--    home UI strings - END -->
 
@@ -65,8 +65,14 @@
     <string name="not_supplied_text">not provided</string>
     <string name="communicate">Communicate</string>
 
-<!--  setting fragment  -->
+    <!--  setting fragment  -->
     <string name="language_label">Langauge:</string>
+
+    <!--  share fragment  -->
+    <string name="share_detail_text">This application is the result of an assignment in the Mobile Application subject to make a travel application for a city in kurdistan region. We decided to design &amp; develop it collaboratively as a team of four. feel free to give feedback or make it better.</string>
+    <string name="GITHUB_LINK_TEXT" translatable="false"><a href="https://github.com/akamfoad/soran-travel">@akamfoad/soran-travel</a></string>
+    <string name="TWITTER_LINK_TEXT" translatable="false"><a href="https://twitter.com/AkamFoad">@AkamFoad</a></string>
+
     <!--  Languages array  -->
     <string-array name="languages">
         <item>English</item>

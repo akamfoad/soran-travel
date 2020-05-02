@@ -114,8 +114,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
-                    android:autoLink="web"
-                    android:linksClickable="true"
                     android:fontFamily="serif"
                     android:text="https://example.com"
                     app:layout_constraintBottom_toBottomOf="@+id/web_icon"
@@ -218,7 +216,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="location"
-        android:fontFamily="serif"
+        android:fontFamily="@font/roboto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/belt" />

@@ -6,6 +6,9 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
+import android.text.method.MovementMethod;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +44,8 @@ public class HotelShowFragment extends Fragment {
         hotelName.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         TextView phoneNo = root.findViewById(R.id.hotel_phone_no);
         TextView webUrl = root.findViewById(R.id.hotel_web_url);
+        webUrl.setMovementMethod(LinkMovementMethod.getInstance());
+        webUrl.setAutoLinkMask(Linkify.WEB_URLS);
         webUrl.setSingleLine(true);
         webUrl.setEllipsize(TextUtils.TruncateAt.END);
         TextView prices = root.findViewById(R.id.prices);

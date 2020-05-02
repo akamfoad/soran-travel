@@ -18,6 +18,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:mipmap/sym_def_app_icon" />
+        app:srcCompat="@mipmap/app_icon_round" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

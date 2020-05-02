@@ -1,11 +1,13 @@
 package com.fanaye.sorantravel.ui.home;
 
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -69,5 +71,8 @@ public class HomeFragment extends Fragment {
                 navC.navigate(R.id.action_nav_home_to_nav_where_to_go);
             }
         });
+
+        final TextView wikipediaLink = view.findViewById(R.id.WIKIPEDIA_LINK);
+        wikipediaLink.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
