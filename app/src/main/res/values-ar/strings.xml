@@ -35,4 +35,7 @@
     <string name="communicate">اتصل</string>
     <string name="language_label">اللغة:</string>
     <string name="share_detail_text">هذا التطبيق هو نتيجة مهمة في تطبيق الهاتف المحمول لإجراء طلب سفر لمدينة في منطقة كردستان. قررنا تصميمه وتطويره بشكل تعاوني كفريق من أربعة أفراد. لا تتردد في تقديم التعليقات أو تحسينها.</string>
+    <string name="gali_ali_bag_label">گەلی عەلی بەگ</string>
+    <string name="kani_maran_label">منتجع کانی ماران</string>
+    <string name="jndian_label">منتجع جندیان</string>
 </resources>

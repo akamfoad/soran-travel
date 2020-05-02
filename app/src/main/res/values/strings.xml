@@ -79,4 +79,9 @@
         <item>کوردی</item>
         <item>العربیة</item>
     </string-array>
+
+<!--  video fragment  -->
+    <string name="gali_ali_bag_label">Gali Ali Bag</string>
+    <string name="kani_maran_label">Kani Maran Resort</string>
+    <string name="jndian_label">Jndian Resort</string>
 </resources>

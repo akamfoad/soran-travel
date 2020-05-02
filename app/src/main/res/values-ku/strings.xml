@@ -35,4 +35,7 @@
     <string name="communicate">پەیوەندیبک</string>
     <string name="language_label">زمان:</string>
     <string name="share_detail_text">ئەم نەرمەکاڵایە دەرەنجامی ئەرکێکە لە وانەی گەشەپێدانی نەرمەکاڵای مۆبایل بۆ دروستکردنی نەرمەکاڵایەکی گەشتیاری بۆ یەکێک لە شارەکانی کوردستان. بڕیارماندا بەشێوەیەکی هەرەوەزیانەی چوارکەسی دیزاین و گەشەپێدانی بۆ بکەین. خۆشحاڵ ئەبین بە پێداچوونەوەت یان باشترکردنی.</string>
+    <string name="gali_ali_bag_label">گەلی عەلی بەگ</string>
+    <string name="kani_maran_label">هاوینەهەواری کانی ماران</string>
+    <string name="jndian_label">هاوینەهەواری جندیان</string>
 </resources>
