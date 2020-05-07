@@ -11,12 +11,14 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_default="percent">
 
             <LinearLayout
                 android:id="@+id/carousilParent"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.15"
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -100,7 +102,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/shortcuts_container" />
 
             <LinearLayout
-                android:id="@+id/about_text_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -112,7 +113,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/about_title_text">
 
                 <TextView
-                    android:id="@+id/GENERAL_INFO_TITLE_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -124,7 +124,6 @@
 
 
                 <TextView
-                    android:id="@+id/GENERAL_INFO_TEXT"
                     style="@style/Widget.MaterialComponents.TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -137,7 +136,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
                 <TextView
-                    android:id="@+id/ETYMOLOGY_TITLE_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -148,7 +146,6 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/ETYMOLOGY_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
@@ -160,7 +157,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
                 <TextView
-                    android:id="@+id/HISTORY_TITLE_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -171,7 +167,6 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/HISTORY_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
@@ -183,7 +178,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/about_title_text" />
 
                 <TextView
-                    android:id="@+id/LANGUAGES_TITLE_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -194,7 +188,6 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/LANGUAGES_TEXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
