@@ -20,6 +20,7 @@
     <string name="menu_hotels">Hotels</string>
     <string name="menu_restaurants">Restaurants</string>
     <string name="menu_where_to_go">Where To Go</string>
+    <string name="menu_weather">Weather</string>
 
     <!--    home UI strings - START -->
 
@@ -80,8 +81,15 @@
         <item>العربیة</item>
     </string-array>
 
-<!--  video fragment  -->
+    <!--  video fragment  -->
     <string name="gali_ali_bag_label">Gali Ali Bag</string>
     <string name="kani_maran_label">Kani Maran Resort</string>
     <string name="jndian_label">Jndian Resort</string>
+
+    <!--  Weather Fragment  -->
+    <string name="WEATHER_API_KEY" translatable="false">cc5d224ef51432465cd86927834c7da0</string>
+    <string name="soran_iraq">Soran, Iraq</string>
+    <string name="pressure">Pressure:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="wind">Wind:</string>
 </resources>

@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SharedPreferences preferences = getPreferences(MODE_PRIVATE);
         String lang = preferences.getString("lang", Resources.getSystem().getConfiguration().getLocales().get(0).getLanguage());
-        System.out.println("lang = " + lang);
         Locale newLocal = new Locale(lang);
+        Locale.setDefault(newLocal);
         Configuration configuration = new Configuration();
         configuration.setLocale(newLocal);
         getResources().updateConfiguration(configuration, getResources().getDisplayMetrics());
@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_videos, R.id.nav_hotels, R.id.nav_resturants, R.id.nav_where_to_go,
-                R.id.nav_setting, R.id.nav_share)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_videos,
+                R.id.nav_hotels, R.id.nav_resturants, R.id.nav_where_to_go,
+                R.id.nav_weather, R.id.nav_setting, R.id.nav_share)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

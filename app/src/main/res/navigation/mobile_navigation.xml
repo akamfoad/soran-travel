@@ -57,7 +57,7 @@
     <fragment
         android:id="@+id/nav_resturants"
         android:name="com.fanaye.sorantravel.ui.resturants.ResturantsFragment"
-        android:label="Restaurants"
+        android:label="@string/menu_restaurants"
         tools:layout="@layout/fragment_restaurants">
         <action
             android:id="@+id/action_nav_resturants_to_restaurantShow"
@@ -66,11 +66,18 @@
     <fragment
         android:id="@+id/nav_where_to_go"
         android:name="com.fanaye.sorantravel.ui.wheretogo.WhereToGoFragment"
-        android:label="Where To Go "
+        android:label="@string/menu_where_to_go"
         tools:layout="@layout/fragment_where_to_go_s">
         <action
             android:id="@+id/action_nav_where_to_go_to_WTGShow"
             app:destination="@id/WTGShow" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_weather"
+        android:name="com.fanaye.sorantravel.ui.weather.WeatherFragment"
+        android:label="@string/menu_weather"
+        tools:layout="@layout/weather_fragment">
+
     </fragment>
     <fragment
         android:id="@+id/WTGShow"

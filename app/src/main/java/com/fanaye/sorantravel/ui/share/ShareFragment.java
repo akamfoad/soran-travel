@@ -9,18 +9,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.fanaye.sorantravel.R;
 
 public class ShareFragment extends Fragment {
 
-    private ShareViewModel shareViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        shareViewModel =
-                ViewModelProviders.of(this).get(ShareViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_share, container, false);
         final TextView githubLink = root.findViewById(R.id.GITHUB_LINK);
         final TextView twitterLink = root.findViewById(R.id.twitter_link);

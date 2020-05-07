@@ -23,8 +23,6 @@ public class ImageViewer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         String UID = getIntent().getExtras().getString("UID");
         String imageOfWhere = getIntent().getExtras().getString("image_of_where");
-        System.out.println(imageOfWhere);
-
         setContentView(R.layout.activity_image_viewer);
         ImageView iv = findViewById(R.id.image_to_preview);
         iv.setLayoutParams(new CoordinatorLayout.LayoutParams(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.MATCH_PARENT));
