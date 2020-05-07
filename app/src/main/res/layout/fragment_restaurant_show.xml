@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/res_show_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.resShow.RestaurantShow">
@@ -16,7 +15,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -106,7 +104,7 @@
 
                 <TextView
                     android:id="@+id/web_url"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"
                     android:fontFamily="@font/roboto"

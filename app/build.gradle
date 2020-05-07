@@ -51,4 +51,6 @@ dependencies {
 
 // GSON parser to json
     implementation 'com.google.code.gson:gson:2.8.6'
+// Youtube player api
+    implementation files('F:\\2019-2020\\Mobile Application - Dr. Moayad\\Assignement\\YouTubeAndroidPlayerApi-1.2.2\\libs\\YouTubeAndroidPlayerApi.jar')
 }

@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="navigation_drawer_open">پەردەی هاتووچۆ بکەرەوە</string>
-    <string name="navigation_drawer_close">پەردەی هاتووچۆ دابخە</string>
     <string name="nav_header_subtitle">شاری سۆران بگەڕێ</string>
     <string name="action_settings">ڕێکخستنەکان</string>
     <string name="soran_palace_hotel_desc">نموونە هۆتێلی سۆران پاڵاس</string>
-    <string name="hotel_name">سۆران پاڵاس</string>
     <string name="menu_home">پەڕەی سەرەکی</string>
     <string name="menu_gallery">وێنەکان</string>
     <string name="menu_videos">ڕەنگاڵە</string>
     <string name="menu_setting">ڕێکخستن</string>
     <string name="menu_share">هاوبەشکردن</string>
-    <string name="menu_send">بنێرە</string>
     <string name="menu_hotels">هۆتێلەکان</string>
     <string name="menu_restaurants">خواردنگەکان</string>
     <string name="menu_where_to_go">شوێنە گەشتیارییەکان</string>

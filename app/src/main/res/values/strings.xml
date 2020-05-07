@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">Soran Travel</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="YOUTUBE_API_KEY" translatable="false">AIzaSyBzGNSJ3GIBKfRw0M2i_LG4rr7oJ2DsvBc</string>
     <string name="nav_header_title" translatable="false">Soran Travel</string>
     <string name="nav_header_subtitle">explore Soran city</string>
     <string name="nav_header_desc" translatable="false">Navigation header</string>
@@ -9,14 +8,12 @@
 
     <!--  Hotel view resources - start  -->
     <string name="soran_palace_hotel_desc">Soran Palace Hotel sample</string>
-    <string name="hotel_name">Soran Palace</string>
     <!--  Hotel view resources - start  -->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_videos">Videos</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
     <string name="menu_hotels">Hotels</string>
     <string name="menu_restaurants">Restaurants</string>
     <string name="menu_where_to_go">Where To Go</string>

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="rating_label">تقييم:</string>
-    <string name="navigation_drawer_open">فتح درج التنقل</string>
-    <string name="navigation_drawer_close">إغلاق درج التنقل</string>
     <string name="nav_header_subtitle">استكشف مدينة سوران</string>
     <string name="action_settings">الإعدادات</string>
     <string name="soran_palace_hotel_desc">عينة فندق سوران بالاس</string>
-    <string name="hotel_name">سوران بالاس</string>
     <string name="menu_home">الصفحة الرئيسية</string>
     <string name="menu_gallery">معرض</string>
     <string name="menu_videos">فيديو</string>
     <string name="menu_setting">ضبط</string>
     <string name="menu_share">شارك</string>
-    <string name="menu_send">إرسال</string>
     <string name="menu_hotels">الفنادق</string>
     <string name="menu_restaurants">مطاعم</string>
     <string name="menu_where_to_go">مکائن السیاحیة</string>
