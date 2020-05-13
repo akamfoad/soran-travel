@@ -11,10 +11,10 @@
     <string name="menu_share">شارك</string>
     <string name="menu_hotels">الفنادق</string>
     <string name="menu_restaurants">مطاعم</string>
-    <string name="menu_where_to_go">مکائن السیاحیة</string>
+    <string name="menu_where_to_go">أماكن سياحية</string>
     <string name="FG_home_HOTELS_BTN">الفنادق</string>
     <string name="FG_home_RESTAURANTS_BTN">مطاعم</string>
-    <string name="FG_home_WTG_BTN">مکائن السیاحیة</string>
+    <string name="FG_home_WTG_BTN">أماكن سياحية</string>
     <string name="about_title_text">حول</string>
     <string name="GENERAL_INFO_TITLE_TEXT">معلومات عامة</string>
     <string name="GENERAL_INFO_TEXT">سوران (كردي: سۆران) أو ديانا هي مدينة في محافظة أربيل وعاصمة منطقة سوران. ديانا هي واحدة من أكبر المدن في إقليم كردستان ، ومن المتوقع أن تزداد في غضون السنوات العشر المقبلة بمقدار 50،000 شخص آخر.</string>
@@ -30,7 +30,7 @@
     <string name="not_supplied_text">غير مزود</string>
     <string name="communicate">اتصل</string>
     <string name="language_label">اللغة:</string>
-    <string name="share_detail_text">هذا التطبيق هو نتيجة مهمة في تطبيق الهاتف المحمول لإجراء طلب سفر لمدينة في منطقة كردستان. قررنا تصميمه وتطويره بشكل تعاوني كفريق من أربعة أفراد. لا تتردد في تقديم التعليقات أو تحسينها.</string>
+    <string name="share_detail_text">هذا التطبيق هو نتيجة مهمة في مادة تطبيق الجوال لعمل تطبيق سياحي لمدينة في مدن إقليم كردستان. قررنا تصميمه وتطويره بشكل جماعي كفريق من أربعة أفراد. لا تتردد في تزويدنا بتعليقاتك أو تحسيناتك.</string>
     <string name="gali_ali_bag_label">گەلی عەلی بەگ</string>
     <string name="kani_maran_label">منتجع کانی ماران</string>
     <string name="jndian_label">منتجع جندیان</string>

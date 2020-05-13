@@ -67,7 +67,7 @@
     <string name="language_label">Langauge:</string>
 
     <!--  share fragment  -->
-    <string name="share_detail_text">This application is the result of an assignment in the Mobile Application subject to make a travel application for a city in kurdistan region. We decided to design &amp; develop it collaboratively as a team of four. feel free to give feedback or make it better.</string>
+    <string name="share_detail_text">This application is the result of an assignment in the material of Mobile Application to make a tourist application for a city in the cities of the Kurdistan Region. We decided to collaboratively design and develop it as a team of four. Feel free to provide us your feedback or improvements.</string>
     <string name="GITHUB_LINK_TEXT" translatable="false"><a href="https://github.com/akamfoad/soran-travel">@akamfoad/soran-travel</a></string>
     <string name="TWITTER_LINK_TEXT" translatable="false"><a href="https://twitter.com/AkamFoad">@AkamFoad</a></string>
 
