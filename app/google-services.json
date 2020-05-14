@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "179828873900",
+    "firebase_url": "https://soran-travel.firebaseio.com",
+    "project_id": "soran-travel",
+    "storage_bucket": "soran-travel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179828873900:android:4a02e274f3660839c69d09",
+        "android_client_info": {
+          "package_name": "com.fanaye.sorantravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179828873900-b1mrfe6lqnukq6j2k0fefl8s6aa94rdi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN66mD1SebNN9UKNYY8GItNe_xUvRnjVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179828873900-b1mrfe6lqnukq6j2k0fefl8s6aa94rdi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

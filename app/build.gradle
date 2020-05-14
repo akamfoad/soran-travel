@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -21,6 +22,13 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+//    apply plugin: 'com.android.application'
+//
+//    apply plugin: 'com.google.gms.google-services' // Google Services Gradle plugin
+
+// Apply the Crashlytics Gradle plugin
+    apply plugin: 'com.google.firebase.crashlytics'
+
 }
 
 dependencies {
@@ -52,5 +60,13 @@ dependencies {
 // GSON parser to json
     implementation 'com.google.code.gson:gson:2.8.6'
 // Youtube player api
-    implementation files('F:\\2019-2020\\Mobile Application - Dr. Moayad\\Assignement\\YouTubeAndroidPlayerApi-1.2.2\\libs\\YouTubeAndroidPlayerApi.jar')
+    implementation files('./libs/YouTubeAndroidPlayerApi.jar')
+
+// firebase crash reporter
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-analytics:17.4.1'
+
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0'
+
 }

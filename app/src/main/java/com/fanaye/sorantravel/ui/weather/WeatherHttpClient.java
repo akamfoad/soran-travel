@@ -1,5 +1,9 @@
 package com.fanaye.sorantravel.ui.weather;
 
+import android.os.Bundle;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -13,7 +17,11 @@ public class WeatherHttpClient {
 
     private static String BASE_URL = "http://api.openweathermap.org/data/2.5/weather?id=";
     private static String IMG_URL = "http://openweathermap.org/img/wn/";
+    private FirebaseAnalytics crashAnalysis;
 
+    WeatherHttpClient(FirebaseAnalytics crashAnalysis) {
+        this.crashAnalysis = crashAnalysis;
+    }
 
     public String getWeatherData(String location, String key) {
         HttpURLConnection con = null;
@@ -24,7 +32,14 @@ public class WeatherHttpClient {
         }
         try {
             con = (HttpURLConnection) (new URL(BASE_URL + location + "&APPID=" + key + "&units=metric&lang=" + lang)).openConnection();
-            con.connect();
+            try {
+                con.connect();
+            } catch (IOException e) {
+                Bundle WAPIREQERR_DATA = new Bundle();
+                WAPIREQERR_DATA.putString("Message", e.getMessage());
+                System.out.println(e.getMessage());
+                crashAnalysis.logEvent("Weather_API_req_error", WAPIREQERR_DATA);
+            }
 
             // Let's read the response
             StringBuffer buffer = new StringBuffer();
@@ -69,9 +84,11 @@ public class WeatherHttpClient {
                 baos.write(buffer);
 
             return baos.toByteArray();
-        } catch (IOException t) {
-            t.printStackTrace(System.err);
-//            t.printStackTrace();
+        } catch (IOException e) {
+            Bundle WAPIREQERR_DATA = new Bundle();
+            WAPIREQERR_DATA.putString("Message", e.getMessage());
+            System.out.println(e.getMessage());
+            crashAnalysis.logEvent("Weather_IMAGE_req_error", WAPIREQERR_DATA);
         } finally {
             try {
                 is.close();

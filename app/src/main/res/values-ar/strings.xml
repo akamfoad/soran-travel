@@ -39,4 +39,5 @@
     <string name="wind">ريح:</string>
     <string name="pressure">الضغط:</string>
     <string name="humidity">رطوبة:</string>
+    <string name="NO_INTERNET_CONNECTION">لا يوجد اتصال بالإنترنت، انقر في أي مكان لإعادة المحاولة</string>
 </resources>
