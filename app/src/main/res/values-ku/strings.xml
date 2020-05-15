@@ -39,4 +39,5 @@
     <string name="pressure">فشار:</string>
     <string name="humidity">شێ:</string>
     <string name="wind">با:</string>
+    <string name="NO_INTERNET_CONNECTION">ئینتەرنێت بەردەست نییە، پەنجەبنێ بە هەرشوێنێکدا بۆ دووبارە هەوڵدانەوە</string>
 </resources>
