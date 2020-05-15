@@ -8,9 +8,8 @@ android {
         applicationId "com.fanaye.sorantravel"
         minSdkVersion 24
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionCode 2
+        versionName "1.1.0"
     }
     buildTypes {
         release {
@@ -22,9 +21,6 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
-//    apply plugin: 'com.android.application'
-//
-//    apply plugin: 'com.google.gms.google-services' // Google Services Gradle plugin
 
 // Apply the Crashlytics Gradle plugin
     apply plugin: 'com.google.firebase.crashlytics'
