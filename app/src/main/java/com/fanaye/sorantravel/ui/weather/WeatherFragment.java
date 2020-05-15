@@ -168,6 +168,8 @@ public class WeatherFragment extends Fragment {
             if (imageData != null && imageData.length > 0) {
                 Bitmap img = BitmapFactory.decodeByteArray(imageData, 0, imageData.length);
                 condIcon.setImageBitmap(img);
+            } else {
+                condIcon.setImageResource(R.drawable.ic_signal_wifi_off_black_24dp);
             }
             if (data != null) {
                 internetErrorLabel.setVisibility(View.GONE);
